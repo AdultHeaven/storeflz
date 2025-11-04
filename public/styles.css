@@ -1,0 +1,88 @@
+:root{
+  --bg:#0b0e14; --panel:#111520; --glass:rgba(255,255,255,.06);
+  --text:#e9eef7; --muted:#93a0b4; --primary:#4c8dff; --primary-900:#2968e6;
+  --stroke:rgba(255,255,255,.08); --success:#18c37a; --danger:#ff5a6a;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{
+  margin:0; font-family:"Inter",system-ui,Segoe UI,Roboto,sans-serif;
+  background: radial-gradient(1200px 600px at 100% -10%, #15203a 0%, transparent 70%), var(--bg);
+  color:var(--text);
+}
+.container{width:min(1100px,92%);margin:0 auto}
+.site-header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.2) blur(8px);
+  background:linear-gradient(180deg,rgba(14,18,26,.85),rgba(14,18,26,.35));border-bottom:1px solid var(--stroke)}
+.header-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700}
+.brand .logo{font-size:1.4rem}
+.nav{display:flex;gap:12px}
+.nav-link{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;border:1px solid transparent}
+.nav-link:hover,.nav-link.active{color:var(--text);border-color:var(--stroke);background:rgba(255,255,255,.03)}
+.hero{padding:40px 0 12px}
+.hero h1{margin:0 0 6px;font-size:clamp(28px,3.8vw,40px)}
+.muted{color:var(--muted)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+  border:1px solid var(--stroke);border-radius:16px;box-shadow:var(--shadow)}
+.glass{padding:22px}
+.form{display:grid;gap:16px}
+.field{display:grid;gap:8px}
+.label{font-weight:600}
+.input{width:100%;background:#0f1320;border:1px solid var(--stroke);color:var(--text);
+  padding:12px 14px;border-radius:12px;outline:none;transition:border .2s, box-shadow .2s}
+.input:focus{border-color:rgba(76,141,255,.6);box-shadow:0 0 0 6px rgba(76,141,255,.12)}
+.input.readonly{opacity:.9}
+.links-header{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.links-list{display:grid;gap:10px}
+.link-row{display:grid;grid-template-columns:40px 1fr 40px;gap:10px;align-items:center}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;height:44px;width:44px;border-radius:12px;
+  background:#0f1320;border:1px solid var(--stroke);color:var(--muted);cursor:pointer}
+.icon-btn:hover{color:var(--text)} .icon-btn.danger{color:var(--danger)} .icon-btn.drag{cursor:grab}
+.actions{margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:12px;
+  border:1px solid transparent;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .05s, background .2s, border .2s}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-900)}
+.btn-secondary{background:transparent;color:var(--text);border:1px solid var(--stroke)}
+.btn-secondary:hover{background:rgba(255,255,255,.04)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--stroke);padding:10px 14px}
+.btn-ghost:hover{background:rgba(255,255,255,.04)}
+.spinner{width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .8s linear infinite;display:none}
+.btn.loading .spinner{display:inline-block}.btn.loading .btn-label{opacity:.6}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error{background:rgba(255,90,106,.12);border:1px solid rgba(255,90,106,.35);color:#ffb3bb;padding:10px 12px;border-radius:12px}
+.success{margin-top:20px;border-color:rgba(24,195,122,.35);background:linear-gradient(180deg,rgba(24,195,122,.08),rgba(24,195,122,.03));padding:18px}
+.result-title{font-weight:700;margin-bottom:10px}
+.result-url-row{display:grid;grid-template-columns:1fr auto;gap:10px}
+.quick-open{margin-top:12px}
+.site-footer{margin-top:60px;padding:22px 0;border-top:1px solid var(--stroke);background:rgba(0,0,0,.15)}
+.footer-wrap{display:flex;justify-content:space-between;align-items:center}
+.foot-right{text-align:right}
+@media (max-width:640px){
+  .link-row{grid-template-columns:36px 1fr 36px}
+  .icon-btn{height:40px;width:40px}
+  .result-url-row{grid-template-columns:1fr}
+}
+
+
+/* make footer stick to bottom */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+  margin-top: 60px;
+  padding: 22px 0;
+  border-top: 1px solid var(--stroke);
+  background: rgba(0,0,0,.15);
+}
