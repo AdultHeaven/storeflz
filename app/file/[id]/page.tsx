@@ -1,5 +1,7 @@
 import "../file.css";
 import MirrorList from "../MirrorList";
+import AdClickGate from "../../comp/AdClickGate"; // adjust path
+import Script from 'next/script';
 
 // data shape from your worker
 type Data = {
@@ -103,6 +105,14 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
   return (
     <>
+        <AdClickGate
+        className="ads-class"
+      />
+     <Script
+        src="/mobilepopup.js"
+        strategy="afterInteractive" // Ensures it runs after hydration
+      />
+
       <header className="fx-header">
         <div className="fx-wrap">
           <a className="fx-brand" href="/"><span className="fx-logo">🪄</span><span>Storeflz</span></a>
