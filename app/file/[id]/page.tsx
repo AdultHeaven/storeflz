@@ -2,6 +2,8 @@ import "../file.css";
 import MirrorList from "../MirrorList";
 import AdClickGate from "../../comp/AdClickGate"; // adjust path
 import Script from 'next/script';
+import AdBanner from "../../comp/AdBanner"; // adjust path
+import AdCenter from "../../comp/AdCenter";
 
 // data shape from your worker
 type Data = {
@@ -105,13 +107,13 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
   return (
     <>
-        <AdClickGate
+        {/* <AdClickGate
         className="ads-class"
-      />
-     <Script
+      /> */}
+     {/* <Script
         src="/mobilepopup.js"
         strategy="afterInteractive" // Ensures it runs after hydration
-      />
+      /> */}
 
       <header className="fx-header">
         <div className="fx-wrap">
@@ -134,7 +136,8 @@ export default async function FileViewPage({ params }: { params: { id: string } 
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
         </section>
       </main>
-
+      <AdCenter/>
+<AdBanner/>
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz</span>
