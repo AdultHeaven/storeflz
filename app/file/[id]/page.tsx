@@ -126,10 +126,15 @@ export default async function FileViewPage({ params }: { params: { id: string } 
         <section className="fx-card fx-glass">
           <div className="fx-head">
             <h1 className="fx-title">{data.title || data.id}</h1>
-            <p className="fx-muted">
+            {/* <p className="fx-muted">
               Choose any mirror. If one fails, try another.
 {data.created_at ? <> Created on {new Date(data.created_at).toLocaleDateString()}</> : null}
-            </p>
+            </p> */}
+            <p className="fx-muted">
+  Select a link below to continue.
+  {data.created_at ? <> Added on {new Date(data.created_at).toLocaleDateString()}</> : null}
+</p>
+
           </div>
 
           {/* interactive part */}
@@ -141,7 +146,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz</span>
-          <span className="fx-muted">Fast, simple mirror pages.</span>
+          <span className="fx-muted">Fast, Shareable Link Pages</span>
         </div>
       </footer>
     </>

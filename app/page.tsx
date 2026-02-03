@@ -62,8 +62,8 @@ export default function HomePage() {
 
       <main className="container">
         <section className="hero">
-          <h1>Create &amp; Share Mirrors</h1>
-          <p className="muted">Add a title and as many links as you want. We’ll return a short share URL.</p>
+          <h1>Create Shareable Link Pages</h1>
+          <p className="muted">Create a shareable page to organize useful links in one place.</p>
         </section>
 
         <section className="card glass">
@@ -130,7 +130,7 @@ export default function HomePage() {
       <footer className="site-footer">
         <div className="container footer-wrap">
           <div className="foot-left">© {new Date().getFullYear()} Storeflz</div>
-          <div className="foot-right muted">Fast, simple mirror pages.</div>
+          <div className="foot-right muted">Fast, Shareable Link Pages</div>
         </div>
       </footer>
     </>

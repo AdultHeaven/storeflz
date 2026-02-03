@@ -1,8 +1,8 @@
 // app/layout.tsx
 // app/layout.tsx
 export const metadata = {
-  title: "Storeflz — Create Mirror Links",
-  description: "Add a title and mirrors; get a short share link.",
+  title: "Create Shareable Link Pages",
+  description: "Create a shareable page to organize useful links in one place.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
