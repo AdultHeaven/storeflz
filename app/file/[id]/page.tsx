@@ -85,6 +85,11 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   if (!res.ok) {
     return (
       <>
+
+        <Script
+          src="https://js.juicyads.com/jp.php?c=4454y2z2t234u4r2p274y2b494&u=https%3A%2F%2Fwww.juicyads.rocks"
+          strategy="afterInteractive"
+        />
         <header className="fx-header">
           <div className="fx-wrap">
             <a className="fx-brand" href="/"><span className="fx-logo">🪄</span><span>Storeflz</span></a>
