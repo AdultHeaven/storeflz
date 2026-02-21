@@ -116,10 +116,14 @@ export default async function FileViewPage({ params }: { params: { id: string } 
         src="/mobilepopup.js"
         strategy="afterInteractive" // Ensures it runs after hydration
       /> */}
-   <Script
+   {/* <Script
           src="https://js.juicyads.com/jp.php?c=4454y2z2t234u4r2p274y2b494&u=https%3A%2F%2Fwww.juicyads.rocks"
           strategy="afterInteractive"
-        />
+        /> */}
+        <Script
+  src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
+  strategy="afterInteractive"
+/>
       <header className="fx-header">
         <div className="fx-wrap">
           <a className="fx-brand" href="/"><span className="fx-logo">🪄</span><span>Storeflz</span></a>
@@ -146,7 +150,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
         </section>
       </main>
-      <AdCenter/>
+      {/* <AdCenter/> */}
 <AdBanner/>
       <footer className="fx-footer">
         <div className="fx-wrap">
