@@ -148,6 +148,15 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
           {/* interactive part */}
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
+          <div className="dev-notice">
+  <div className="dev-notice-icon">⚠️</div>
+
+  <div className="dev-notice-text">
+    <strong>Developer Notice</strong>
+    <p>
+Some links may not open on the first click. Please click again if needed. We're working on improving this and will update it soon. Thank you for your patience.    </p>
+  </div>
+</div>
         </section>
       </main>
       {/* <AdCenter/> */}
