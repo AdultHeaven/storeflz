@@ -2,31 +2,36 @@
 
 import { useEffect } from "react";
 
-export default function SmartlinkTrigger() {
+export default function SmartlinkAnchorGate() {
   useEffect(() => {
-    const SMARTLINK = "https://roomsmergeshipwreck.com/mi2s67uf8m?key=035ff8cf9ce79ba1d043006022dcb0d5";
+    const SMARTLINK = "/out"; // your own redirect endpoint (see below)
     let fired = false;
 
-    const handler = (e: MouseEvent | TouchEvent) => {
-      // @ts-ignore
+    const handler = (e: any) => {
       if (e?.isTrusted === false) return;
       if (fired) return;
 
       fired = true;
 
-      setTimeout(() => {
-        window.open(SMARTLINK, "_blank", "noopener,noreferrer");
-      }, 30);
+      const a = document.createElement("a");
+      a.href = SMARTLINK;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
 
-      document.removeEventListener("click", handler, true);
+      // must be in DOM for some browsers
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+
+      document.removeEventListener("mousedown", handler, true);
       document.removeEventListener("touchstart", handler, true);
     };
 
-    document.addEventListener("click", handler, true);
+    document.addEventListener("mousedown", handler, true);
     document.addEventListener("touchstart", handler, true);
 
     return () => {
-      document.removeEventListener("click", handler, true);
+      document.removeEventListener("mousedown", handler, true);
       document.removeEventListener("touchstart", handler, true);
     };
   }, []);
