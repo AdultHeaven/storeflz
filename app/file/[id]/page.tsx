@@ -160,7 +160,35 @@ Some links may not open on the first click. Please click again if needed. We're 
         </section>
       </main>
       {/* <AdCenter/> */}
-<AdBanner/>
+{/* <AdBanner/> */}
+
+<div id="inline-ad-slot-3" />
+
+<Script
+  id="inline-ad-script-3"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        var container = document.getElementById('inline-ad-slot-3');
+        if (!container) return;
+
+        var wrapper = document.createElement('div');
+        wrapper.style.width = "100%";
+        wrapper.style.display = "flex";
+        wrapper.style.justifyContent = "center";
+
+        var s = document.createElement('script');
+        s.src = "//amazingmeaning.com/b/X.VbsCdlGHlV0cY/WAcH/ReDmx9-unZdUhluktP/T/Yk4IOgDXcy3pMhDgUPt/Ndj-gT4zNpz/cowLOEQd";
+        s.async = true;
+        s.referrerPolicy = 'no-referrer-when-downgrade';
+
+        wrapper.appendChild(s);
+        container.appendChild(wrapper);
+      })();
+    `,
+  }}
+/>
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz</span>
