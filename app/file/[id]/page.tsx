@@ -110,21 +110,18 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
   return (
     <>
-        {/* <AdClickGate
-        className="ads-class"
-      /> */}
-     {/* <Script
-        src="/mobilepopup.js"
+     <Script
+        src="/hilltop.js"
         strategy="afterInteractive" // Ensures it runs after hydration
-      /> */}
+      />
    {/* <Script
           src="https://js.juicyads.com/jp.php?c=4454y2z2t234u4r2p274y2b494&u=https%3A%2F%2Fwww.juicyads.rocks"
           strategy="afterInteractive"
         /> */}
-        <Script
+        {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>
+/> */}
       {/* <SmartlinkTrigger /> */}
 
       <header className="fx-header">
@@ -163,8 +160,34 @@ Some links may not open on the first click. Please click again if needed. We're 
         </section>
       </main>
       {/* <AdCenter/> */}
-<AdBanner/>
+{/* <AdBanner/> */}
+<div id="inline-ad-slot-3" />
 
+<Script
+  id="inline-ad-script-3"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        var container = document.getElementById('inline-ad-slot-3');
+        if (!container) return;
+
+        var wrapper = document.createElement('div');
+        wrapper.style.width = "100%";
+        wrapper.style.display = "flex";
+        wrapper.style.justifyContent = "center";
+
+        var s = document.createElement('script');
+        s.src = "//amazingmeaning.com/b/X.VbsCdlGHlV0cY/WAcH/ReDmx9-unZdUhluktP/T/Yk4IOgDXcy3pMhDgUPt/Ndj-gT4zNpz/cowLOEQd";
+        s.async = true;
+        s.referrerPolicy = 'no-referrer-when-downgrade';
+
+        wrapper.appendChild(s);
+        container.appendChild(wrapper);
+      })();
+    `,
+  }}
+/>
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz</span>
