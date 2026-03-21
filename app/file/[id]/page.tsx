@@ -125,7 +125,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
 /> */}
-      <SmartlinkTrigger />
+      {/* <SmartlinkTrigger /> */}
 
       <header className="fx-header">
         <div className="fx-wrap">
@@ -165,7 +165,7 @@ Some links may not open on the first click. Please click again if needed. We're 
       {/* <AdCenter/> */}
 {/* <AdBanner/> */}
 
-<div id="inline-ad-slot-3" />
+{/* <div id="inline-ad-slot-3" />
 
 <Script
   id="inline-ad-script-3"
@@ -191,7 +191,7 @@ Some links may not open on the first click. Please click again if needed. We're 
       })();
     `,
   }}
-/>
+/> */}
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz</span>
