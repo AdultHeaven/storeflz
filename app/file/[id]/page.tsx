@@ -114,14 +114,10 @@ export default async function FileViewPage({ params }: { params: { id: string } 
         src="/hilltop.js"
         strategy="afterInteractive" // Ensures it runs after hydration
       /> */}
-   {/* <Script
-          src="https://js.juicyads.com/jp.php?c=4454y2z2t234u4r2p274y2b494&u=https%3A%2F%2Fwww.juicyads.rocks"
-          strategy="afterInteractive"
-        /> */}
-        {/* <Script
+        <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/> */}
+/>
       {/* <SmartlinkTrigger /> */}
 
       <header className="fx-header">
