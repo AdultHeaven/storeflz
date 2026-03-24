@@ -157,7 +157,7 @@ Some links may not open on the first click. Please click again if needed. We're 
         </section>
       </main>
       {/* <AdCenter/> */}
-{/* <AdBanner/> */}
+<AdBanner/>
 
       <footer className="fx-footer">
         <div className="fx-wrap">
