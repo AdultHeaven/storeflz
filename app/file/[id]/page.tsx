@@ -114,10 +114,10 @@ export default async function FileViewPage({ params }: { params: { id: string } 
         src="/hilltop.js"
         strategy="afterInteractive" // Ensures it runs after hydration
       /> */}
-         <Script
+         {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/> 
+/>  */}
 
       {/* <SmartlinkTrigger /> */}
 
