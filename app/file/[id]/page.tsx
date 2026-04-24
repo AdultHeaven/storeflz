@@ -164,7 +164,7 @@ Some links may not open on the first click. Please click again if needed. We're 
         </section>
       </main>
       {/* <AdCenter/> */}
-{/* <AdBanner/> */}
+<AdBanner/>
 {/* <Script
       id="hilltop-logic"
       strategy="afterInteractive"
