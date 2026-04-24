@@ -5,7 +5,7 @@ import Script from 'next/script';
 import AdBanner from "../../comp/AdBanner"; // adjust path
 import AdCenter from "../../comp/AdCenter";
 import SmartlinkTrigger from "../../comp/SmartlinkTrigger";
-
+import HilltopAd from '../../comp/HilltopAd';
 // data shape from your worker
 type Data = {
   id: string;
@@ -159,18 +159,38 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 Some links may not open on the first click. Please click again if needed. We're working on improving this and will update it soon. Thank you for your patience.    </p>
   </div>
 </div> */}
+<HilltopAd />
+
         </section>
       </main>
       {/* <AdCenter/> */}
-<AdBanner/>
-<div id="container-6736fe12ee184733bf2b50f38e703b00" />
+{/* <AdBanner/> */}
+<Script
+      id="hilltop-logic"
+      strategy="afterInteractive"
+      dangerouslySetInnerHTML={{
+        __html: `
+          (function(cic){
+            var d = document,
+                s = d.createElement('script'),
+                l = d.scripts[d.scripts.length - 1];
+            s.settings = cic || {};
+            s.src = "//nervous-tell.com/bVXCVEs/d.G/lC0yYcW/cN/ielmK9gusZXULl/kmPPT_YZ5OOEDNcxwvOnTLc_trNZjgku4iN/zEECwKM/QT";
+            s.async = true;
+            s.referrerPolicy = 'no-referrer-when-downgrade';
+            l.parentNode.insertBefore(s, l);
+          })({})
+        `,
+      }}
+    />
+{/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
 
 <Script
   src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
   strategy="afterInteractive"
   async
   data-cfasync="false"
-/>
+/> */}
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz</span>
