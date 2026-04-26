@@ -160,33 +160,7 @@ Some links may not open on the first click. Please click again if needed. We're 
   </div>
 </div> */}
 {/* <HilltopAd /> */}
-<div 
-      id="a-ads-container" 
-      style={{ 
-        width: '100%', 
-        margin: '20px auto', 
-        position: 'relative', 
-        zIndex: 99998 
-      }}
-    >
-      {/* Using a standard iframe in Next.js is fine for A-ADS 
-          as long as the 'src' protocol is handled correctly.
-      */}
-      <iframe 
-        data-aa="2435646" 
-        src="https://acceptable.a-ads.com/2435646/?size=Adaptive"
-        style={{
-          border: 0,
-          padding: 0,
-          width: '70%',
-          height: '250px', // Set a default height to prevent Layout Shift
-          overflow: 'hidden',
-          display: 'block',
-          margin: 'auto'
-        }}
-        title="A-ADS"
-      />
-    </div>
+
 <AdBanner/>
         </section>
       </main>
