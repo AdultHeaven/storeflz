@@ -14,12 +14,7 @@ type Data = {
   created_at?: string;
 };
 
-const mirrorMeta = {
-  "pixeldrain.com": { ads: "low", reliability: "medium" },
-  "gofile.io": { ads: "low", reliability: "medium" },
-  "bunkr.ru": { ads: "high", reliability: "high" },
-  "turbo.cr": { ads: "high", reliability: "high" },
-};
+
 import type { Metadata, ResolvingMetadata } from "next";
 
 const SITE = "https://storeflz.com";

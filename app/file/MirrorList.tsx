@@ -84,9 +84,11 @@ const mirrorMeta: Record<
 > = {
   "pixeldrain": { ads: "less", reliability: "medium" },
   "gofile": { ads: "less", reliability: "low" },
+  "mega": { ads: "less", reliability: "low" },
   "small": { ads: "less", reliability: "high" },
   "bunkr": { ads: "high", reliability: "high" },
   "turbo": { ads: "high", reliability: "high" },
+  "filester": { ads: "high", reliability: "high" },
 };
 
 function capitalize(s: string) {
