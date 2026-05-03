@@ -168,14 +168,14 @@ Some links may not open on the first click. Please click again if needed. We're 
       </main>
       {/* <AdCenter/> */}
 
-<div id="container-6736fe12ee184733bf2b50f38e703b00" />
+{/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
 
 <Script
   src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
   strategy="afterInteractive"
   async
   data-cfasync="false"
-/>
+/> */}
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz</span>
