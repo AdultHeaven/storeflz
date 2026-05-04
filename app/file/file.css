@@ -526,3 +526,16 @@ body{
 /* 🔥 BETTER Colors (Desaturated, More Premium) */
 .ads-low { color: #82da9d; /* more sea-foam, less lime */ }
 .rel-medium { color: #a5b4fc; /* soft lavender/blue, less intense purple */ }
+
+.dev-notice-link {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dev-notice-link:hover {
+  background: rgba(255, 77, 109, 0.08);
+  border-radius: 12px;
+}

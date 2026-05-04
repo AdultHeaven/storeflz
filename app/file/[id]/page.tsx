@@ -159,15 +159,21 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
           {/* interactive part */}
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
-          {/* <div className="dev-notice">
-  <div className="dev-notice-icon">⚠️</div>
+<a
+  href="https://t.vlmai-1.com/384478/7793?aff_sub5=SF_006OG000004lmDN"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  className="dev-notice dev-notice-link"
+>
+  <div className="dev-notice-icon">💖</div>
 
   <div className="dev-notice-text">
-    <strong>Developer Notice</strong>
+    <strong>Feeling lonely? Not anymore.</strong>
     <p>
-Some links may not open on the first click. Please click again if needed. We're working on improving this and will update it soon. Thank you for your patience.    </p>
+      Create your own girlfriend and experience a personalized, interactive companion like never before.
+    </p>
   </div>
-</div> */}
+</a>
 {/* <HilltopAd /> */}
 
 {/* <AdBanner/> */}
