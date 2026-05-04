@@ -121,12 +121,12 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   strategy="afterInteractive"
 />  */}
 
-{Math.random() < 0.5 && (
+{/* {Math.random() < 0.5 && (
   <Script
     src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
     strategy="afterInteractive"
   />
-)}
+)} */}
  {/* <Script
         id="juicyads-popunder"
         strategy="afterInteractive"
