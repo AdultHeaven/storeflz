@@ -164,7 +164,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
           {/* interactive part */}
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
 <a
-  href="https://t.vlmai-1.com/384478/7793?aff_sub5=SF_006OG000004lmDN"
+  href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="dev-notice dev-notice-link"
@@ -174,7 +174,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   <div className="dev-notice-text">
     <strong>Feeling lonely? Not anymore.</strong>
     <p>
-      Create your own girlfriend and experience a personalized, interactive companion like never before.
+  Connect privately with beautiful women and enjoy a personalized, interactive experience like never before.
     </p>
   </div>
 </a>
