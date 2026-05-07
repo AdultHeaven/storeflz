@@ -112,18 +112,18 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
   return (
     <>
-   <Script
+   {/* <Script
   src="https://roomsmergeshipwreck.com/a1/9d/06/a19d0659e81de4660d2057466e4c9f0f.js"
   strategy="afterInteractive"
-/>
+/> */}
      {/* <Script
         src="/hilltop.js"
         strategy="afterInteractive" // Ensures it runs after hydration
       /> */}
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>  */}
+/> 
 
 {/* {Math.random() < 0.5 && (
   <Script
