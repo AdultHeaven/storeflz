@@ -5,7 +5,9 @@ import Script from 'next/script';
 import AdBanner from "../../comp/AdBanner"; // adjust path
 import AdCenter from "../../comp/AdCenter";
 import SmartlinkTrigger from "../../comp/SmartlinkTrigger";
-import HilltopAd from '../../comp/HilltopAd';
+import TrafficStarsPush from '../../comp/TrafficStarsPush';
+
+
 // data shape from your worker
 type Data = {
   id: string;
@@ -120,6 +122,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
         src="/hilltop.js"
         strategy="afterInteractive" // Ensures it runs after hydration
       /> */}
+<TrafficStarsPush/>
          <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
@@ -163,7 +166,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
           {/* interactive part */}
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
-<a
+{/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
   rel="nofollow noopener noreferrer"
@@ -177,10 +180,12 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   Connect privately with beautiful women and enjoy a personalized, interactive experience like never before.
     </p>
   </div>
-</a>
+</a> */}
 {/* <HilltopAd /> */}
 
 {/* <AdBanner/> */}
+
+
         </section>
       </main>
       {/* <AdCenter/> */}
