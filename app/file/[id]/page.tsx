@@ -114,33 +114,12 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
   return (
     <>
-   {/* <Script
-  src="https://roomsmergeshipwreck.com/a1/9d/06/a19d0659e81de4660d2057466e4c9f0f.js"
-  strategy="afterInteractive"
-/> */}
-     {/* <Script
-        src="/hilltop.js"
-        strategy="afterInteractive" // Ensures it runs after hydration
-      /> */}
-{/* <TrafficStarsPush/> */}
-         <Script
+
+         {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/> 
+/>  */}
 
-{/* {Math.random() < 0.5 && (
-  <Script
-    src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
-    strategy="afterInteractive"
-  />
-)} */}
- {/* <Script
-        id="juicyads-popunder"
-        strategy="afterInteractive"
-        type="text/javascript"
-        src="https://js.juicyads.com/jp.php?c=4454y2z2t234u4r2p274y2b494&u=https%3A%2F%2Fwww.juicyads.rocks"
-      /> */}
-      {/* <SmartlinkTrigger /> */}
 
       <header className="fx-header">
         <div className="fx-wrap">
@@ -165,6 +144,41 @@ export default async function FileViewPage({ params }: { params: { id: string } 
           </div>
 
           {/* interactive part */}
+
+
+      <div className="fx-banner-wrap">
+
+  {/* Desktop 728x90 */}
+  <a
+    href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+    className="fx-banner-desktop"
+  >
+    <img
+      src="https://www.imglnkx.com/9022/728x90-SFW-banner-02.jpg"
+      alt="Candy AI"
+      width="728"
+      height="90"
+    />
+  </a>
+
+  {/* Mobile 300x100 */}
+  <a
+    href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+    className="fx-banner-mobile"
+  >
+    <img
+      src="https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif"
+      alt="Candy AI"
+      width="300"
+      height="100"
+    />
+  </a>
+
+</div>    
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
 {/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"

@@ -539,3 +539,70 @@ body{
   background: rgba(255, 77, 109, 0.08);
   border-radius: 12px;
 }
+
+.fx-banner-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 24px;
+}
+
+/* COMMON */
+.fx-banner-desktop,
+.fx-banner-mobile {
+  overflow: hidden;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.03);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.fx-banner-desktop:hover,
+.fx-banner-mobile:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(255,255,255,0.14);
+
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.45),
+    0 0 18px rgba(80,255,160,0.08);
+}
+
+.fx-banner-desktop img,
+.fx-banner-mobile img {
+  display: block;
+}
+
+/* DESKTOP */
+.fx-banner-desktop {
+  display: block;
+  width: 728px;
+  height: 90px;
+}
+
+.fx-banner-mobile {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+
+  .fx-banner-desktop {
+    display: none;
+  }
+
+  .fx-banner-mobile {
+    display: block;
+    width: 300px;
+    height: 100px;
+  }
+}
