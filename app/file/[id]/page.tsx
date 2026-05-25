@@ -48,6 +48,9 @@ export async function generateMetadata(
   const absoluteUrl = `${SITE}${canonical}`;
   const ogImage = `${SITE}/og/storeflz.png`; // put a 1200x630 image at /public/og/storeflz.png
 
+
+
+
   return {
     metadataBase: new URL(SITE),
     title,
@@ -85,8 +88,37 @@ export async function generateMetadata(
 export const dynamic = "force-dynamic";
 
 export default async function FileViewPage({ params }: { params: { id: string } }) {
-  const res = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, { cache: "no-store" });
+  const res = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, { cache: "no-store" });;
+    const candyBanners = [
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_04.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_05.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_07.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_08.gif",
+];
 
+const randomBanner =
+  candyBanners[Math.floor(Math.random() * candyBanners.length)];
+const candy728Banners = [
+  "https://www.imglnkx.com/9022/728x90-SFW-banner-01.jpg",
+  "https://www.imglnkx.com/9022/728x90-SFW-banner-02.jpg",
+  "https://www.imglnkx.com/9022/728x90-SFW-banner-03.jpg",
+  "https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-01.jpg",
+  "https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg",
+  "https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-03.jpg",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h2_728x90_09_cmai.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b2h1_728x90_04_cmai.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h1_728x90_06_cmai.gif",
+  "https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif",
+];
+
+const random728Banner =
+  candy728Banners[Math.floor(Math.random() * candy728Banners.length)];
+
+  
   if (!res.ok) {
     return (
       <>
@@ -150,33 +182,33 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
   {/* Desktop 728x90 */}
   <a
-    href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
+    href="https://t.vlmai-1.com/384478/9022/35081?aff_sub5=SF_006OG000004lmDN"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
   >
-    <img
-      src="https://www.imglnkx.com/9022/728x90-SFW-banner-02.jpg"
-      alt="Candy AI"
-      width="728"
-      height="90"
-    />
+ <img
+    src={random728Banner}
+    alt="Candy AI"
+    width="728"
+    height="90"
+  />
   </a>
 
   {/* Mobile 300x100 */}
-  <a
-    href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
-    target="_blank"
-    rel="nofollow noopener noreferrer"
-    className="fx-banner-mobile"
-  >
-    <img
-      src="https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif"
-      alt="Candy AI"
-      width="300"
-      height="100"
-    />
-  </a>
+<a
+  href="https://t.vlmai-1.com/384478/9022/35081?aff_sub5=SF_006OG000004lmDN"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  className="fx-banner-mobile"
+>
+  <img
+    src={randomBanner}
+    alt="Candy AI"
+    width="300"
+    height="100"
+  />
+</a>
 
 </div>    
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
