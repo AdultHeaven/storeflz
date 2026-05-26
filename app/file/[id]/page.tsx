@@ -140,10 +140,10 @@ const random728Banner =
   return (
     <>
 
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>  */}
+/> 
 
 
       <header className="fx-header">
@@ -170,10 +170,9 @@ const random728Banner =
 
           {/* interactive part */}
 
-
+{/* 
       <div className="fx-banner-wrap">
 
-  {/* Desktop 728x90 */}
   <a
     href="/api/go/faphouse"
     target="_blank"
@@ -188,7 +187,6 @@ const random728Banner =
   />
   </a>
 
-  {/* Mobile 300x100 */}
 <a
   href="/api/go/faphouse"
   target="_blank"
@@ -203,7 +201,7 @@ const random728Banner =
   />
 </a>
 
-</div>    
+</div>     */}
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
 {/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
