@@ -175,7 +175,7 @@ const random728Banner =
 
   {/* Desktop 728x90 */}
   <a
-    href="https://t.anadw.link/384478/6561?aff_sub5=SF_006OG000004lmDN"
+    href="/api/go/faphouse"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -190,7 +190,7 @@ const random728Banner =
 
   {/* Mobile 300x100 */}
 <a
-  href="https://t.anadw.link/384478/6561?aff_sub5=SF_006OG000004lmDN"
+  href="/api/go/faphouse"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
