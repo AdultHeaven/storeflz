@@ -584,10 +584,10 @@ body{
 
 /* DESKTOP */
 .fx-banner-desktop {
-  margin-top: 30px;
+  margin-top: 10px;
   display: block;
-  width: 900px;
-  height: 250px;
+  width: 728px;
+  height: 90px;
 }
 
 .fx-banner-mobile {
@@ -602,9 +602,9 @@ body{
   }
 
   .fx-banner-mobile {
-      margin-top: 20px;
+      margin-top: 0px;
     display: block;
     width: 300px;
-    height: 250px;
+    height: 100px;
   }
 }

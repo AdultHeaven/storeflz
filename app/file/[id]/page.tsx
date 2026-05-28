@@ -90,25 +90,46 @@ export const dynamic = "force-dynamic";
 export default async function FileViewPage({ params }: { params: { id: string } }) {
   const res = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, { cache: "no-store" });;
 
-  const mobileBanners = [
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset5.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset6.gif',
-  'https://www.imglnkx.com/9022/300x250-SFW-banner-03.jpg',
-  'https://www.imglnkx.com/9022/300x250-SFW-banner-01.jpg',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_02_300x250_video_banner_candy_05.jpg',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_03_300x250_video_banner_candy_02.jpg',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
+//   const mobileBanners = [
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset5.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset6.gif',
+//   'https://www.imglnkx.com/9022/300x250-SFW-banner-03.jpg',
+//   'https://www.imglnkx.com/9022/300x250-SFW-banner-01.jpg',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_02_300x250_video_banner_candy_05.jpg',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_03_300x250_video_banner_candy_02.jpg',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
+// ];
+const mobileBanners = [
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_05.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_04.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_08.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_07.gif',
 ];
 const randomBanner =
   mobileBanners[Math.floor(Math.random() * mobileBanners.length)];
 
 
+// const desktopBanners = [
+//   'https://www.imglnkx.com/9022/01_realistic_nsfw_900x250_candy_banner.gif',
+//   'https://www.imglnkx.com/9022/nsfw_anime_900x250.gif',
+//   'https://www.imglnkx.com/9022/Create_anime_900x250_candyai.gif',
+// ];
 const desktopBanners = [
-  'https://www.imglnkx.com/9022/01_realistic_nsfw_900x250_candy_banner.gif',
-  'https://www.imglnkx.com/9022/nsfw_anime_900x250.gif',
-  'https://www.imglnkx.com/9022/Create_anime_900x250_candyai.gif',
+  'https://www.imglnkx.com/9022/728x90-SFW-banner-03.jpg',
+  'https://www.imglnkx.com/9022/728x90-SFW-banner-01.jpg',
+  'https://www.imglnkx.com/9022/728x90-SFW-banner-02.jpg',
+  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
+  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-01.jpg',
+  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-03.jpg',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h2_728x90_09_cmai.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b2h1_728x90_04_cmai.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h1_728x90_06_cmai.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
 ];
-
 
 const random728Banner =
   desktopBanners[Math.floor(Math.random() * desktopBanners.length)];
@@ -171,10 +192,6 @@ const random728Banner =
           </div>
 
           {/* interactive part */}
-
-  
-          <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
-          
       <div className="fx-banner-wrap">
 
   <a
@@ -186,8 +203,8 @@ const random728Banner =
  <img
     src={random728Banner}
     alt="Candy AI"
-    width="900"
-          height="250"
+    width="728"
+          height="90"
   />
   </a>
 
@@ -201,11 +218,15 @@ const random728Banner =
     src={randomBanner}
     alt="Candy AI"
      width="300"
-          height="250"
+          height="100"
   />
 </a>
 
-</div>  
+</div> 
+  
+          <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
+          
+ 
 {/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
