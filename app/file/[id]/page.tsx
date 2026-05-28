@@ -178,7 +178,7 @@ const random728Banner =
       <div className="fx-banner-wrap">
 
   <a
-    href="/api/go/candi?plc=strMblBig"
+    href="/api/go/candi?plc=strPcBig"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -192,7 +192,7 @@ const random728Banner =
   </a>
 
 <a
-  href="/api/go/candi?plc=strPcBig"
+  href="/api/go/candi?plc=strMblBig"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
