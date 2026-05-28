@@ -89,27 +89,29 @@ export const dynamic = "force-dynamic";
 
 export default async function FileViewPage({ params }: { params: { id: string } }) {
   const res = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, { cache: "no-store" });;
-const candyBanners = [
-  "https://simp6.cuckcapital.cr/images4/300100-5f3fe635dd413b127.jpg",
-  "https://simp6.cuckcapital.cr/images4/300100-4471b986b4f1bc68b.jpg",
-  "https://simp6.cuckcapital.cr/images4/300100-35bde36595efdd6a0.jpg",
-  "https://simp6.cuckcapital.cr/images4/300100-29226fbead031685c.jpg",
-  "https://simp6.cuckcapital.cr/images4/300100-1c47dbdf4551df306.jpg",
-];
 
+  const mobileBanners = [
+  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset5.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset6.gif',
+  'https://www.imglnkx.com/9022/300x250-SFW-banner-03.jpg',
+  'https://www.imglnkx.com/9022/300x250-SFW-banner-01.jpg',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_02_300x250_video_banner_candy_05.jpg',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_03_300x250_video_banner_candy_02.jpg',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
+];
 const randomBanner =
-  candyBanners[Math.floor(Math.random() * candyBanners.length)];
+  mobileBanners[Math.floor(Math.random() * mobileBanners.length)];
 
-const candy728Banners = [
-  "https://simp6.cuckcapital.cr/images4/Banner_72890-66909ef90d4074888.jpg",
-  "https://simp6.cuckcapital.cr/images4/Banner_72890-5453426112b02dac5.jpg",
-  "https://simp6.cuckcapital.cr/images4/Banner_72890-4406e85232fae7a48.jpg",
-  "https://simp6.cuckcapital.cr/images4/Banner_72890-3126ae477b2005fcc.jpg",
-  "https://simp6.cuckcapital.cr/images4/Banner_72890-26744ea5c18837399.jpg",
-  "https://simp6.cuckcapital.cr/images4/Banner_72890-14d14ca9c13a6570d.jpg",
+
+const desktopBanners = [
+  'https://www.imglnkx.com/9022/01_realistic_nsfw_900x250_candy_banner.gif',
+  'https://www.imglnkx.com/9022/nsfw_anime_900x250.gif',
+  'https://www.imglnkx.com/9022/Create_anime_900x250_candyai.gif',
 ];
+
+
 const random728Banner =
-  candy728Banners[Math.floor(Math.random() * candy728Banners.length)];
+  desktopBanners[Math.floor(Math.random() * desktopBanners.length)];
 
   
   if (!res.ok) {
@@ -140,10 +142,10 @@ const random728Banner =
   return (
     <>
 
-         <Script
+         {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/> 
+/>  */}
 
 
       <header className="fx-header">
@@ -170,11 +172,13 @@ const random728Banner =
 
           {/* interactive part */}
 
-{/* 
+  
+          <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
+          
       <div className="fx-banner-wrap">
 
   <a
-    href="/api/go/faphouse"
+    href="/api/go/candi?plc=strMblBig"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -182,13 +186,13 @@ const random728Banner =
  <img
     src={random728Banner}
     alt="Candy AI"
-    width="728"
-    height="90"
+    width="900"
+          height="250"
   />
   </a>
 
 <a
-  href="/api/go/faphouse"
+  href="/api/go/candi?plc=strPcBig"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
@@ -196,13 +200,12 @@ const random728Banner =
   <img
     src={randomBanner}
     alt="Candy AI"
-    width="300"
-    height="100"
+     width="300"
+          height="250"
   />
 </a>
 
-</div>     */}
-          <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
+</div>  
 {/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
@@ -224,7 +227,9 @@ const random728Banner =
 
 
         </section>
+        
       </main>
+      
       {/* <AdCenter/> */}
 
 {/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
