@@ -163,10 +163,10 @@ const random728Banner =
   return (
     <>
 
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>  */}
+/> 
 
 
       <header className="fx-header">
@@ -192,7 +192,7 @@ const random728Banner =
           </div>
 
           {/* interactive part */}
-      <div className="fx-banner-wrap">
+      {/* <div className="fx-banner-wrap">
 
   <a
     href="/api/go/candi?plc=strPcBig"
@@ -222,7 +222,7 @@ const random728Banner =
   />
 </a>
 
-</div> 
+</div>  */}
   
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
           
