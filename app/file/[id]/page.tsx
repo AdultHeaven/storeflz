@@ -164,11 +164,10 @@ const random728Banner =
   return (
     <>
 
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>  */}
-<AffiliatePop/>
+/> 
 
       <header className="fx-header">
         <div className="fx-wrap">
