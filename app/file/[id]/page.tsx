@@ -288,7 +288,7 @@ const random728CandiBanner =
   href="/api/go/candi?plc=strMblBig"
   target="_blank"
   rel="nofollow noopener noreferrer"
-  className="fx-banner-mobile"
+  className="fx-banner-mobile fx-banner-mobile1"
 >
   <img
     src={randomCandiBanner}

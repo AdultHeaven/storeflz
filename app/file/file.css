@@ -607,6 +607,12 @@ body{
   }
 
   .fx-banner-mobile {
+      margin-top: -7px;
+    display: block;
+    width: 300px;
+    height: 100px;
+  }
+   .fx-banner-mobile1 {
       margin-top: 10px;
     display: block;
     width: 300px;
