@@ -14,7 +14,7 @@ export async function GET(req: Request) {
   const placement = url.searchParams.get('plc');
 
   await supabase.from('affiliate_clicks').insert({
-    offer_slug: 'candi',
+    offer_slug: 'jerkmate',
     placement,
     page_url: page,
     user_agent: req.headers.get('user-agent'),
