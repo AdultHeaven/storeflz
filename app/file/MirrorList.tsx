@@ -177,9 +177,9 @@ const meta = metaEntry?.[1];
       </ul>
 
       <div className="fx-bottom">
-        <a href="/" className="fx-btn fx-lite">
+        {/* <a href="/" className="fx-btn fx-lite">
           ← Create another
-        </a>
+        </a> */}
 
         <div className="fx-share">
           <input className="fx-input" readOnly value={pageUrl} />
