@@ -586,8 +586,13 @@ body{
 .fx-banner-desktop {
   margin-top: 10px;
   display: block;
-  width: 970px;
   height: 90px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.fx-banner-desktop:hover {
+  opacity: 1;
 }
 
 .fx-banner-mobile {
@@ -602,7 +607,7 @@ body{
   }
 
   .fx-banner-mobile {
-      margin-top: 0px;
+      margin-top: 10px;
     display: block;
     width: 300px;
     height: 100px;

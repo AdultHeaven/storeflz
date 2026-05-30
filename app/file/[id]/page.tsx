@@ -100,16 +100,16 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_03_300x250_video_banner_candy_02.jpg',
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
 // ];
-// const mobileBanners = [
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif',
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif',
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_05.gif',
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_04.gif',
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_08.gif',
-//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_07.gif',
-// ];
+const mobileCandiBanners = [
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_05.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_04.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_08.gif',
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_07.gif',
+];
 
   const mobileBanners = [
   'https://www.imglnkx.com/8780/000110F_JRKM_18_ALL_EN_64_L.gif',
@@ -118,11 +118,14 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 const randomBanner =
   mobileBanners[Math.floor(Math.random() * mobileBanners.length)];
 
+  const randomCandiBanner =
+  mobileCandiBanners[Math.floor(Math.random() * mobileCandiBanners.length)];
+
 
 const desktopBanners = [
+
   'https://www.imglnkx.com/8780/000110AH_JRKM_18_ALL_EN_22646_L.jpg',
-  'https://www.imglnkx.com/8780/009193B_JRKM_18_ALL_EN_22646_L.jpg',
-  'https://www.imglnkx.com/8780/000110AI_JRKM_18_ALL_EN_22646_L.jpg',
+    'https://www.imglnkx.com/8780/000110AI_JRKM_18_ALL_EN_22646_L.jpg',
   'https://www.imglnkx.com/8780/009195A_JRKM_18_ALL_EN_22646_L.jpg'
 ];
 // const desktopBanners = [
@@ -140,6 +143,15 @@ const desktopBanners = [
 
 const random728Banner =
   desktopBanners[Math.floor(Math.random() * desktopBanners.length)];
+
+
+  const desktopCandiBanners = [
+  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
+  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
+];
+
+const random728CandiBanner =
+  desktopCandiBanners[Math.floor(Math.random() * desktopCandiBanners.length)];
 
   
   if (!res.ok) {
@@ -254,9 +266,39 @@ const random728Banner =
 
 
         </section>
-        
+
       </main>
-      
+                      <div className="fx-banner-wrap">
+
+  <a
+    href="/api/go/candi?plc=strPcBig"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+    className="fx-banner-desktop"
+  >
+ <img
+    src={random728CandiBanner}
+    alt="Candy AI"
+    width="728"
+          height="90"
+  />
+  </a>
+
+<a
+  href="/api/go/candi?plc=strMblBig"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  className="fx-banner-mobile"
+>
+  <img
+    src={randomCandiBanner}
+    alt="Candy AI"
+     width="300"
+          height="100"
+  />
+</a>
+
+</div> 
       {/* <AdCenter/> */}
 
 {/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
