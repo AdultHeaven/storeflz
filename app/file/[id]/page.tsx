@@ -100,37 +100,43 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_EN_03_300x250_video_banner_candy_02.jpg',
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
 // ];
-const mobileBanners = [
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_05.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_04.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_08.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_07.gif',
+// const mobileBanners = [
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_05.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_04.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_08.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_07.gif',
+// ];
+
+  const mobileBanners = [
+  'https://www.imglnkx.com/8780/000110F_JRKM_18_ALL_EN_64_L.gif',
+
 ];
 const randomBanner =
   mobileBanners[Math.floor(Math.random() * mobileBanners.length)];
 
 
-// const desktopBanners = [
-//   'https://www.imglnkx.com/9022/01_realistic_nsfw_900x250_candy_banner.gif',
-//   'https://www.imglnkx.com/9022/nsfw_anime_900x250.gif',
-//   'https://www.imglnkx.com/9022/Create_anime_900x250_candyai.gif',
-// ];
 const desktopBanners = [
-  'https://www.imglnkx.com/9022/728x90-SFW-banner-03.jpg',
-  'https://www.imglnkx.com/9022/728x90-SFW-banner-01.jpg',
-  'https://www.imglnkx.com/9022/728x90-SFW-banner-02.jpg',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-01.jpg',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-03.jpg',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h2_728x90_09_cmai.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b2h1_728x90_04_cmai.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h1_728x90_06_cmai.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
+  'https://www.imglnkx.com/8780/000110AH_JRKM_18_ALL_EN_22646_L.jpg',
+  'https://www.imglnkx.com/8780/009193B_JRKM_18_ALL_EN_22646_L.jpg',
+  'https://www.imglnkx.com/8780/000110AI_JRKM_18_ALL_EN_22646_L.jpg',
+  'https://www.imglnkx.com/8780/009195A_JRKM_18_ALL_EN_22646_L.jpg'
 ];
+// const desktopBanners = [
+//   'https://www.imglnkx.com/9022/728x90-SFW-banner-03.jpg',
+//   'https://www.imglnkx.com/9022/728x90-SFW-banner-01.jpg',
+//   'https://www.imglnkx.com/9022/728x90-SFW-banner-02.jpg',
+//   'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
+//   'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-01.jpg',
+//   'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-03.jpg',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h2_728x90_09_cmai.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b2h1_728x90_04_cmai.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h1_728x90_06_cmai.gif',
+//   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
+// ];
 
 const random728Banner =
   desktopBanners[Math.floor(Math.random() * desktopBanners.length)];
@@ -164,10 +170,10 @@ const random728Banner =
   return (
     <>
 
-         <Script
+         {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/> 
+/>  */}
 
       <header className="fx-header">
         <div className="fx-wrap">
@@ -192,10 +198,10 @@ const random728Banner =
           </div>
 
           {/* interactive part */}
-      {/* <div className="fx-banner-wrap">
+       <div className="fx-banner-wrap">
 
   <a
-    href="/api/go/candi?plc=strPcBig"
+    href="/api/go/jerkmate?plc=strPcBig"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -203,13 +209,13 @@ const random728Banner =
  <img
     src={random728Banner}
     alt="Candy AI"
-    width="728"
+    width="970"
           height="90"
   />
   </a>
 
 <a
-  href="/api/go/candi?plc=strMblBig"
+  href="/api/go/jerkmate?plc=strMblBig"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
@@ -222,7 +228,7 @@ const random728Banner =
   />
 </a>
 
-</div>  */}
+</div>  
   
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
           
