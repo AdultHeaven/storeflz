@@ -105,10 +105,6 @@ const mobileCandiBanners = [
   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif',
   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_05.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_04.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_08.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_07.gif',
 ];
 
   const mobileBanners = [
@@ -210,64 +206,6 @@ const random728CandiBanner =
           </div>
 
           {/* interactive part */}
-       <div className="fx-banner-wrap">
-
-  <a
-    href="/api/go/jerkmate?plc=strPcBig"
-    target="_blank"
-    rel="nofollow noopener noreferrer"
-    className="fx-banner-desktop"
-  >
- <img
-    src={random728Banner}
-    alt="Candy AI"
-    width="970"
-          height="90"
-  />
-  </a>
-
-<a
-  href="/api/go/jerkmate?plc=strMblBig"
-  target="_blank"
-  rel="nofollow noopener noreferrer"
-  className="fx-banner-mobile"
->
-  <img
-    src={randomBanner}
-    alt="Candy AI"
-     width="300"
-          height="100"
-  />
-</a>
-
-</div>  
-  
-          <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
-          
- 
-{/* <a
-  href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
-  target="_blank"
-  rel="nofollow noopener noreferrer"
-  className="dev-notice dev-notice-link"
->
-  <div className="dev-notice-icon">💖</div>
-
-  <div className="dev-notice-text">
-    <strong>Feeling lonely? Not anymore.</strong>
-    <p>
-  Connect privately with beautiful women and enjoy a personalized, interactive experience like never before.
-    </p>
-  </div>
-</a> */}
-{/* <HilltopAd /> */}
-
-{/* <AdBanner/> */}
-
-
-        </section>
-
-      </main>
                       <div className="fx-banner-wrap">
 
   <a
@@ -299,6 +237,65 @@ const random728CandiBanner =
 </a>
 
 </div> 
+  
+          <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
+          
+ 
+{/* <a
+  href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  className="dev-notice dev-notice-link"
+>
+  <div className="dev-notice-icon">💖</div>
+
+  <div className="dev-notice-text">
+    <strong>Feeling lonely? Not anymore.</strong>
+    <p>
+  Connect privately with beautiful women and enjoy a personalized, interactive experience like never before.
+    </p>
+  </div>
+</a> */}
+{/* <HilltopAd /> */}
+
+{/* <AdBanner/> */}
+
+
+        </section>
+
+      </main>
+
+       <div className="fx-banner-wrap">
+
+  <a
+    href="/api/go/jerkmate?plc=strPcBig"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+    className="fx-banner-desktop"
+  >
+ <img
+    src={random728Banner}
+    alt="Candy AI"
+    width="970"
+          height="90"
+  />
+  </a>
+
+<a
+  href="/api/go/jerkmate?plc=strMblBig"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  className="fx-banner-mobile"
+>
+  <img
+    src={randomBanner}
+    alt="Candy AI"
+     width="300"
+          height="100"
+  />
+</a>
+
+</div>  
       {/* <AdCenter/> */}
 
 {/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
