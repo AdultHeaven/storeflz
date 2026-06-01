@@ -211,8 +211,7 @@ const random728CandiBanner =
                       <div className="fx-banner-wrap">
 
   <a
-    // href="/api/go/candi?plc=strPcBig"
-    href="https://candyai.gg/home2?via=lxrukg"
+    href="/api/go/candi?plc=strPcBig"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -226,8 +225,7 @@ const random728CandiBanner =
   </a>
 
 <a
-  // href="/api/go/candi?plc=strMblBig"
-  href="https://candyai.gg/home2?via=lxrukg"
+  href="/api/go/candi?plc=strMblBig"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"

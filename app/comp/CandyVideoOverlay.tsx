@@ -100,7 +100,7 @@ export default function CandyVideoOverlay() {
 
   const handleVideoClick = () => {
     window.open(
-      'https://candyai.gg/home2?via=lxrukg',
+      '/api/go/candi?plc=video',
       '_blank',
       'noopener,noreferrer'
     );
