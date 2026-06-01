@@ -24,7 +24,8 @@ export default function CandyVideoOverlay() {
 
   const handleVideoClick = () => {
     window.open(
-      '/api/go/candi?plc=videoModal',
+    //   '/api/go/candi?plc=videoModal',
+    'https://candyai.gg/home2?via=lxrukg',
       '_blank',
       'noopener,noreferrer'
     );
