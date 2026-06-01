@@ -107,12 +107,12 @@ const mobileCandiBanners = [
   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
 ];
 
-  const mobileBanners = [
+  const mobileJerkMateBanners = [
   'https://www.imglnkx.com/8780/000110F_JRKM_18_ALL_EN_64_L.gif',
 
 ];
-const randomBanner =
-  mobileBanners[Math.floor(Math.random() * mobileBanners.length)];
+const randomJerkmateBanner =
+  mobileJerkMateBanners[Math.floor(Math.random() * mobileJerkMateBanners.length)];
 
   const randomCandiBanner =
   mobileCandiBanners[Math.floor(Math.random() * mobileCandiBanners.length)];
@@ -178,10 +178,10 @@ const random728CandiBanner =
   return (
     <>
 
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>  */}
+/>  
 
       <header className="fx-header">
         <div className="fx-wrap">
@@ -206,7 +206,7 @@ const random728CandiBanner =
           </div>
 
           {/* interactive part */}
-                      <div className="fx-banner-wrap">
+                      {/* <div className="fx-banner-wrap">
 
   <a
     href="/api/go/candi?plc=strPcBig"
@@ -236,7 +236,7 @@ const random728CandiBanner =
   />
 </a>
 
-</div> 
+</div>  */}
   
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
           
@@ -264,7 +264,7 @@ const random728CandiBanner =
         </section>
 
       </main>
-
+{/* 
        <div className="fx-banner-wrap">
 
   <a
@@ -288,14 +288,14 @@ const random728CandiBanner =
   className="fx-banner-mobile fx-banner-mobile1"
 >
   <img
-    src={randomBanner}
+    src={randomJerkmateBanner}
     alt="Candy AI"
      width="300"
           height="100"
   />
 </a>
 
-</div>  
+</div>   */}
       {/* <AdCenter/> */}
 
 {/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
