@@ -7,7 +7,8 @@ import AdCenter from "../../comp/AdCenter";
 import SmartlinkTrigger from "../../comp/SmartlinkTrigger";
 import TrafficStarsPush from '../../comp/TrafficStarsPush';
 import AffiliatePop from '../../comp/AffiliatePop';
-
+import CandyVideoOverlay from '../../comp/CandyVideoOverlay';
+import '../CandyVideoOverlay.css';
 
 // data shape from your worker
 type Data = {
@@ -177,6 +178,7 @@ const random728CandiBanner =
 
   return (
     <>
+      <CandyVideoOverlay />
 
          {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
@@ -265,7 +267,7 @@ const random728CandiBanner =
 
       </main>
 
-       <div className="fx-banner-wrap">
+       {/* <div className="fx-banner-wrap">
 
   <a
     href="/api/go/jerkmate?plc=strPcBig"
@@ -295,7 +297,7 @@ const random728CandiBanner =
   />
 </a>
 
-</div>  
+</div>   */}
       {/* <AdCenter/> */}
 
 {/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
