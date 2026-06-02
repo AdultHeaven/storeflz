@@ -22,6 +22,6 @@ export async function GET(req: Request) {
   });
 
   return NextResponse.redirect(
-    'https://t.vlmai-1.com/384478/9022/40055?aff_sub5=SF_006OG000004lmDN'
+    'https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN'
   );
 }
