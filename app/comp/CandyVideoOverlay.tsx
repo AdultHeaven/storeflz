@@ -145,6 +145,7 @@
 //   );
 // }
 
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -154,6 +155,8 @@ type Offer = 'candi' | 'ourdream';
 export default function CandyVideoOverlay() {
   const [visible, setVisible] = useState(false);
   const [offer, setOffer] = useState<Offer>('candi');
+  const [videoSrc, setVideoSrc] = useState('');
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
     const dismissedAt = localStorage.getItem('video-overlay-dismissed');
@@ -166,33 +169,46 @@ export default function CandyVideoOverlay() {
       }
     }
 
-    // 50/50 split
     const selectedOffer: Offer =
       Math.random() < 0.5 ? 'candi' : 'ourdream';
 
     setOffer(selectedOffer);
 
-    const videoSrc =
+    const selectedVideoSrc =
       selectedOffer === 'candi'
         ? 'https://ads.storeflz.com/candy-ai-6.mp4'
         : 'https://ads.storeflz.com/ourdream-4-final-draft.mp4';
 
-    // Preload video
-    const video = document.createElement('video');
-    video.preload = 'auto';
-    video.src = videoSrc;
+    setVideoSrc(selectedVideoSrc);
 
-let timer: ReturnType<typeof setTimeout>;
-video.onloadeddata = () => {
-  timer = setTimeout(() => {
-    setVisible(true);
-  }, 3000);
-};
+    let preloadReady = false;
+    let delayPassed = false;
 
-    video.load();
+    const tryShow = () => {
+      if (preloadReady && delayPassed) {
+        setVisible(true);
+      }
+    };
+
+    // preload video immediately
+    const preloadVideo = document.createElement('video');
+    preloadVideo.preload = 'auto';
+    preloadVideo.src = selectedVideoSrc;
+
+    preloadVideo.onloadeddata = () => {
+      preloadReady = true;
+      tryShow();
+    };
+
+    const timer = setTimeout(() => {
+      delayPassed = true;
+      tryShow();
+    }, 3000);
+
+    preloadVideo.load();
 
     return () => {
-      if (timer) clearTimeout(timer);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -216,14 +232,16 @@ video.onloadeddata = () => {
       '_blank',
       'noopener,noreferrer'
     );
+
+      localStorage.setItem(
+    'video-overlay-dismissed',
+    Date.now().toString()
+  );
+
+  setVisible(false);
   };
 
-  const videoSrc =
-    offer === 'candi'
-      ? 'https://ads.storeflz.com/candy-ai-6.mp4'
-      : 'https://ads.storeflz.com/ourdream-4-final-draft.mp4';
-
-  if (!visible) return null;
+  if (!visible || !videoSrc) return null;
 
   return (
     <div className="candy-overlay">
@@ -237,6 +255,7 @@ video.onloadeddata = () => {
         </button>
 
         <video
+          key={videoSrc}
           className="candy-video"
           autoPlay
           muted
@@ -244,6 +263,11 @@ video.onloadeddata = () => {
           loop
           preload="auto"
           onClick={handleVideoClick}
+          onLoadedData={() => setVideoReady(true)}
+          style={{
+            opacity: videoReady ? 1 : 0,
+            transition: 'opacity 0.15s ease'
+          }}
         >
           <source
             src={videoSrc}
