@@ -179,12 +179,12 @@ const random728CandiBanner =
 
   return (
     <>
-      <CandyVideoOverlay />
+      {/* <CandyVideoOverlay /> */}
 
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>   */}
+/>  
 
       <header className="fx-header">
         <div className="fx-wrap">
@@ -209,7 +209,7 @@ const random728CandiBanner =
           </div>
 
           {/* interactive part */}
-                      <div className="fx-banner-wrap">
+                      {/* <div className="fx-banner-wrap">
 
   <a
     href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
@@ -232,12 +232,7 @@ const random728CandiBanner =
   className="fx-banner-mobile"
 >
   
-  {/* <img
-    src={randomCandiBanner}
-    alt="Candy AI"
-     width="300"
-          height="100"
-  /> */}
+
   {isVideo ? (
   <video
     autoPlay
@@ -259,7 +254,7 @@ const random728CandiBanner =
 )}
 </a>
 
-</div> 
+</div>  */}
   
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
           
