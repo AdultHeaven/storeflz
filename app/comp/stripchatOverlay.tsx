@@ -17,7 +17,7 @@ const videoSrc =
   videoSources[Math.floor(Math.random() * videoSources.length)];
 
   const offerLink =
-    'https://t.acrsmartcam.com/384478/3778/8996?po=6533&aff_sub5=SF_006OG000004lmDN';
+    'https://go.mavrtracktor.com?userId=854cac3f51668e345a459ed6181f323836ec70a9c81fb259c414f2d3887ff355';
 
   useEffect(() => {
     const dismissedAt = localStorage.getItem(
