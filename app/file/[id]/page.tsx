@@ -210,7 +210,7 @@ const random728CandiBanner =
           </div>
 
           {/* interactive part */}
-                      {/* <div className="fx-banner-wrap">
+                      <div className="fx-banner-wrap">
 
   <a
     href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
@@ -255,7 +255,7 @@ const random728CandiBanner =
 )}
 </a>
 
-</div>  */}
+</div> 
   
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
           
