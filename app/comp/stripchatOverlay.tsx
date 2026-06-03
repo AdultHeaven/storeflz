@@ -148,7 +148,7 @@ const fiveMinutes = 5 * 60 * 1000;
   </h3>
 
   <p className="promo-description">
-    Limited-time offer. Upgrade now and save 50% on premium access.
+    Limited-time offer. Upgrade now and save 50%.
   </p>
 
   <button
