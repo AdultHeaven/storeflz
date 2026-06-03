@@ -8,7 +8,9 @@ export default function StripchatOverlay() {
 
   const videoSources = [
   'https://video.mavrtracktor.com/production/prerolls/EvaElfie.mp4',
-  'https://video.mavrtracktor.com/production/prerolls/005.mp4',
+  'https://video.mavrtracktor.com/production/prerolls/angel_inoprofile_v2-zh.mp4',
+  'https://video.mavrtracktor.com/production/prerolls/sharasuo.mp4',
+  'https://video.mavrtracktor.com/production/prerolls/squirtinglinsey_v2-nl.mp4'
 ];
 
 const videoSrc =
@@ -23,9 +25,8 @@ const videoSrc =
     );
 
     if (dismissedAt) {
-      const tenMinutes = 10 * 60 * 1000;
-
-      if (Date.now() - Number(dismissedAt) < tenMinutes) {
+const fiveMinutes = 5 * 60 * 1000;
+      if (Date.now() - Number(dismissedAt) < fiveMinutes) {
         return;
       }
     }
@@ -116,7 +117,7 @@ const videoSrc =
 
         {/* BELOW VIDEO PROMO SECTION */}
 
-        <div className="promo-section">
+        {/* <div className="promo-section">
           <div className="promo-badge">
             🔥 LIMITED TIME OFFER
           </div>
@@ -136,7 +137,27 @@ const videoSrc =
           >
             Claim Offer Now
           </button>
-        </div>
+        </div> */}
+        <div className="promo-section">
+  <div className="promo-badge">
+    🔥 50% OFF TODAY
+  </div>
+
+  <h3 className="promo-title">
+    Stripchat Summer Sale
+  </h3>
+
+  <p className="promo-description">
+    Limited-time offer. Upgrade now and save 50% on premium access.
+  </p>
+
+  <button
+    className="promo-button"
+    onClick={handleOfferClick}
+  >
+            Claim Offer Now
+  </button>
+</div>
       </div>
     </div>
   );
