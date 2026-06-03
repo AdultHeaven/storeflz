@@ -17,7 +17,7 @@ const videoSrc =
   videoSources[Math.floor(Math.random() * videoSources.length)];
 
   const offerLink =
-    'https://go.mavrtracktor.com?userId=854cac3f51668e345a459ed6181f323836ec70a9c81fb259c414f2d3887ff355';
+    'https://go.mavrtracktor.com/api/goToTheRoom?tag=girls&sound=on&userId=854cac3f51668e345a459ed6181f323836ec70a9c81fb259c414f2d3887ff355';
 
   useEffect(() => {
     const dismissedAt = localStorage.getItem(
