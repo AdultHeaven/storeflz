@@ -52,7 +52,7 @@ const fiveMinutes = 5 * 60 * 1000;
     const timer = setTimeout(() => {
       delayPassed = true;
       tryShow();
-    }, 3000);
+    }, 1500);
 
     preloadVideo.load();
 
@@ -148,8 +148,7 @@ const fiveMinutes = 5 * 60 * 1000;
   </h3>
 
   <p className="promo-description">
-    Limited-time offer. Upgrade now and save 50%.
-  </p>
+Limited-time offer. Save 50% on tokens.  </p>
 
   <button
     className="promo-button"
