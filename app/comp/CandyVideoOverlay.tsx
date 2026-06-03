@@ -255,37 +255,50 @@ const selectedVideoSrc =
   if (!visible || !videoSrc) return null;
 
   return (
-    <div className="candy-overlay">
-      <div className="candy-modal">
-        <button
-          className="candy-close"
-          onClick={closeOverlay}
-          aria-label="Close"
-        >
-          ✕
-        </button>
+ <div className="candy-overlay">
+  <div className="candy-modal">
+    <button
+      className="candy-close"
+      onClick={closeOverlay}
+      aria-label="Close"
+    >
+      ✕
+    </button>
 
-        <video
-          key={videoSrc}
-          className="candy-video"
-          autoPlay
-          muted
-          playsInline
-          loop
-          preload="auto"
-          onClick={handleVideoClick}
-          onLoadedData={() => setVideoReady(true)}
-          style={{
-            opacity: videoReady ? 1 : 0,
-            transition: 'opacity 0.15s ease'
-          }}
-        >
-          <source
-            src={videoSrc}
-            type="video/mp4"
-          />
-        </video>
-      </div>
-    </div>
+    <a
+      href="https://landing.candynetwork.ai/lp1?var_text=28&via=lxrukg"
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => {
+        localStorage.setItem(
+          'video-overlay-dismissed',
+          Date.now().toString()
+        );
+        setVisible(false);
+      }}
+    >
+      <video
+        key={videoSrc}
+        className="candy-video"
+        autoPlay
+        muted
+        playsInline
+        loop
+        preload="auto"
+        onLoadedData={() => setVideoReady(true)}
+        style={{
+          opacity: videoReady ? 1 : 0,
+          transition: 'opacity 0.15s ease',
+          cursor: 'pointer'
+        }}
+      >
+        <source
+          src={videoSrc}
+          type="video/mp4"
+        />
+      </video>
+    </a>
+  </div>
+</div>
   );
 }
