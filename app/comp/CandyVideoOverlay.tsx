@@ -162,22 +162,33 @@ export default function CandyVideoOverlay() {
     const dismissedAt = localStorage.getItem('video-overlay-dismissed');
 
     if (dismissedAt) {
-      const tenMinutes = 10 * 60 * 1000;
+      const tenMinutes = 5 * 60 * 1000;
 
       if (Date.now() - Number(dismissedAt) < tenMinutes) {
         return;
       }
     }
 
-    const selectedOffer: Offer =
-      Math.random() < 0.5 ? 'candi' : 'ourdream';
+    const selectedOffer: Offer ='candi';
+      // Math.random() < 0.5 ? 'candi' : 'ourdream';
 
     setOffer(selectedOffer);
 
-    const selectedVideoSrc =
-      selectedOffer === 'candi'
-        ? 'https://ads.storeflz.com/candy-ai-6.mp4'
-        : 'https://ads.storeflz.com/ourdream-4-final-draft.mp4';
+    // const selectedVideoSrc =
+    //   selectedOffer === 'candi'
+    //     ? 'https://ads.storeflz.com/candy-ai-6.mp4'
+    //     : 'https://ads.storeflz.com/ourdream-4-final-draft.mp4';
+
+    const videoSources = [
+  // 'https://ads.storeflz.com/candy-ai-6.mp4',
+  'https://ads.storeflz.com/preroll_realistic_hook_2_cmai%20(top%20perf%F0%9F%94%A5).mp4',
+  'https://ads.storeflz.com/preroll_realistic_hook_4_cmai.mp4',
+  // add more here
+];
+
+const selectedVideoSrc =
+  videoSources[Math.floor(Math.random() * videoSources.length)];
+
 
     setVideoSrc(selectedVideoSrc);
 
@@ -203,7 +214,7 @@ export default function CandyVideoOverlay() {
     const timer = setTimeout(() => {
       delayPassed = true;
       tryShow();
-    }, 3000);
+    }, 1500);
 
     preloadVideo.load();
 
@@ -224,7 +235,7 @@ export default function CandyVideoOverlay() {
   const handleVideoClick = () => {
     const target =
       offer === 'candi'
-        ? 'https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN'
+        ? 'https://landing.candynetwork.ai/lp1?var_text=28&via=lxrukg'
         : 'https://t.vlmai-1.com/384478/10139/0?aff_sub5=SF_006OG000004lmDN';
 
     window.open(

@@ -180,8 +180,8 @@ const random728CandiBanner =
 
   return (
     <>
-
-<StripchatOverlay />
+<CandyVideoOverlay />
+{/* <StripchatOverlay /> */}
          {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
