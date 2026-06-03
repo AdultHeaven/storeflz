@@ -86,78 +86,49 @@ const fiveMinutes = 5 * 60 * 1000;
   if (!visible) return null;
 
   return (
-    <div className="candy-overlay">
-      <div className="candy-modal">
-        <button
-          className="candy-close"
-          onClick={closeOverlay}
-          aria-label="Close"
-        >
-          ✕
-        </button>
+<div className="candy-overlay">
+  <div className="candy-modal">
+    <button
+      className="candy-close"
+      onClick={closeOverlay}
+      aria-label="Close"
+    >
+      ✕
+    </button>
 
-        <video
-          className="candy-video"
-          autoPlay
-          muted
-          playsInline
-          loop
-          preload="auto"
-          onLoadedData={() => setVideoReady(true)}
-          style={{
-            opacity: videoReady ? 1 : 0,
-            transition: 'opacity 0.15s ease'
-          }}
-        >
-          <source
-            src={videoSrc}
-            type="video/mp4"
-          />
-        </video>
-
-        {/* BELOW VIDEO PROMO SECTION */}
-
-        {/* <div className="promo-section">
-          <div className="promo-badge">
-            🔥 LIMITED TIME OFFER
-          </div>
-
-          <h3 className="promo-title">
-            Summer Sale - 50% OFF
-          </h3>
-
-          <p className="promo-description">
-            Unlock premium access and chat with your
-            favorite creators today.
-          </p>
-
-          <button
-            className="promo-button"
-            onClick={handleOfferClick}
-          >
-            Claim Offer Now
-          </button>
-        </div> */}
-        <div className="promo-section">
-  <div className="promo-badge">
-    🔥 50% OFF TODAY
+    <a
+      href={offerLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => {
+        localStorage.setItem(
+          'video-overlay-dismissed',
+          Date.now().toString()
+        );
+        setVisible(false);
+      }}
+    >
+      <video
+        className="candy-video"
+        autoPlay
+        muted
+        playsInline
+        loop
+        preload="auto"
+        onLoadedData={() => setVideoReady(true)}
+        style={{
+          opacity: videoReady ? 1 : 0,
+          transition: 'opacity 0.15s ease',
+          cursor: 'pointer'
+        }}
+      >
+        <source
+          src={videoSrc}
+          type="video/mp4"
+        />
+      </video>
+    </a>
   </div>
-
-  <h3 className="promo-title">
-    Stripchat Summer Sale
-  </h3>
-
-  <p className="promo-description">
-Limited-time offer. Save 50% on tokens.  </p>
-
-  <button
-    className="promo-button"
-    onClick={handleOfferClick}
-  >
-            Claim Offer Now
-  </button>
 </div>
-      </div>
-    </div>
   );
 }
