@@ -8,6 +8,7 @@ import SmartlinkTrigger from "../../comp/SmartlinkTrigger";
 import TrafficStarsPush from '../../comp/TrafficStarsPush';
 import AffiliatePop from '../../comp/AffiliatePop';
 import CandyVideoOverlay from '../../comp/CandyVideoOverlay';
+import StripchatOverlay from '../../comp/stripchatOverlay';
 import '../CandyVideoOverlay.css';
 
 // data shape from your worker
@@ -179,12 +180,12 @@ const random728CandiBanner =
 
   return (
     <>
-      {/* <CandyVideoOverlay /> */}
 
-         <Script
+<StripchatOverlay />
+         {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>  
+/>   */}
 
       <header className="fx-header">
         <div className="fx-wrap">
