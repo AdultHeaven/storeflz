@@ -1,5 +1,8 @@
 // app/layout.tsx
-// app/layout.tsx
+import { Suspense } from 'react'
+import { PostHogProvider } from './providers'
+import PostHogPageView from './comp/PostHogPageView'
+
 export const metadata = {
   title: "Create Shareable Link Pages",
   description: "Create a shareable page to organize useful links in one place.",
@@ -20,7 +23,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        <PostHogProvider>
+          <Suspense fallback={null}>
+            <PostHogPageView />
+          </Suspense>
+          {children}
+        </PostHogProvider>
+      </body>
     </html>
   );
 }
