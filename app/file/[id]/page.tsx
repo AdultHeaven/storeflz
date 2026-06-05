@@ -104,7 +104,6 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 // ];
 const mobileCandiBanners = [
   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_02.gif',
   'https://ads.storeflz.com/EN_02_300x100_video_banner_candy_06.mp4',
   'https://ads.storeflz.com/EN_03_300x100_video_banner_candy_03.mp4'
 
@@ -192,10 +191,10 @@ const random728CandiBanner =
     {/* <AffiliatePop /> */}
 {/* <CandyVideoOverlay /> */}
 {/* <StripchatOverlay /> */}
-         <Script
+         {/* <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>  
+/>   */}
 
       <header className="fx-header">
         <div className="fx-wrap">
