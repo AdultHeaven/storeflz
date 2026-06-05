@@ -2,11 +2,30 @@
 import { Suspense } from 'react'
 import { PostHogProvider } from './providers'
 import PostHogPageView from './comp/PostHogPageView'
+import "./globals.css";
 
 export const metadata = {
   title: "Create Shareable Link Pages",
   description: "Create a shareable page to organize useful links in one place.",
 };
+
+
+function TopPromoBar() {
+  return (
+    <a
+      href="https://t.vlmai-1.com/384478/9022/38565?aff_sub5=SF_006OG000004lmDN"
+      className="ai-gf-banner"
+    >
+      <span className="ai-gf-banner-text">
+        💕 Create Your Own AI Girlfriend
+      </span>
+
+      <span className="ai-gf-banner-button">
+        TRY NOW →
+      </span>
+    </a>
+  );
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -28,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Suspense fallback={null}>
             <PostHogPageView />
           </Suspense>
+          <TopPromoBar />
           {children}
         </PostHogProvider>
       </body>
