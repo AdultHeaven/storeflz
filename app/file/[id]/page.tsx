@@ -189,13 +189,13 @@ const random728CandiBanner =
 
   return (
     <>
-    <AffiliatePop />
+    {/* <AffiliatePop /> */}
 {/* <CandyVideoOverlay /> */}
 {/* <StripchatOverlay /> */}
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>   */}
+/>  
 
       <header className="fx-header">
         <div className="fx-wrap">
