@@ -103,10 +103,12 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
 // ];
 const mobileCandiBanners = [
-  'https://www.imglnkx.com/10139/300-x-100---AI-PORN-IS-HERE-3.gif',
+  // 'https://www.imglnkx.com/10139/300-x-100---AI-PORN-IS-HERE-3.gif',
   // 'https://ads.storeflz.com/EN_02_300x100_video_banner_candy_06.mp4',
   // 'https://ads.storeflz.com/EN_03_300x100_video_banner_candy_03.mp4'
-
+  'https://www.imglnkx.com/779/006672C_MYFC_18_ALL_EN_64_L.gif',
+  'https://www.imglnkx.com/779/006611AX_FCAM_18_ALL_EN_64_L.gif',
+'https://www.imglnkx.com/779/006672B_MYFC_18_ALL_EN_64_L.gif'
 ];
 
 // const mobileCandiBanners = [
@@ -115,8 +117,10 @@ const mobileCandiBanners = [
 //   'https://video.mavrtracktor.com/b/758f1d7a.png',
 // ];
   const mobileJerkMateBanners = [
-  'https://www.imglnkx.com/8780/000110F_JRKM_18_ALL_EN_64_L.gif',
-
+  // 'https://www.imglnkx.com/8780/000110F_JRKM_18_ALL_EN_64_L.gif',
+  'https://www.imglnkx.com/779/006672C_MYFC_18_ALL_EN_64_L.gif',
+  'https://www.imglnkx.com/779/006611AX_FCAM_18_ALL_EN_64_L.gif',
+'https://www.imglnkx.com/779/006672B_MYFC_18_ALL_EN_64_L.gif'
 ];
 const randomJerkmateBanner =
   mobileJerkMateBanners[Math.floor(Math.random() * mobileJerkMateBanners.length)];
@@ -149,8 +153,10 @@ const random728Banner =
 
 
   const desktopCandiBanners = [
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
+  // 'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
+  // 'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
+  'https://www.imglnkx.com/779/004165C_MYFC_18_ALL_EN_15639_E.jpg',
+  'https://www.imglnkx.com/779/003676E_MYFC_18_ALL_EN_15639_E.jpg'
 ];
 
 //   const desktopCandiBanners = [
@@ -222,7 +228,7 @@ const random728CandiBanner =
                        <div className="fx-banner-wrap">
 
   <a
-    href="https://t.vlmai-1.com/384478/10139/39626?aff_sub5=SF_006OG000004lmDN"
+    href="https://t.amyfc.link/384478/779/22558?po=6533&aff_sub5=SF_006OG000004lmDN"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -236,7 +242,7 @@ const random728CandiBanner =
   </a>
 
 <a
-  href="https://t.vlmai-1.com/384478/10139/39626?aff_sub5=SF_006OG000004lmDN"
+  href="https://t.amyfc.link/384478/779/22558?po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
