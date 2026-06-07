@@ -152,8 +152,7 @@ const random728Banner =
 
   const desktopCandiBanners = [
   // 'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
-  // 'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
-  'https://www.imglnkx.com/3785/006362A_GDAT_18_ALL_EN_125_L.jpg',
+  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
 ];
 
 //   const desktopCandiBanners = [
@@ -225,7 +224,7 @@ const random728CandiBanner =
                        <div className="fx-banner-wrap">
 
   <a
-    href="https://t.ajrkmx1.com/384478/8780/32497?po=6533&aff_sub5=SF_006OG000004lmDN"
+    href="https://t.vlmai-1.com/384478/9022/39455?aff_sub5=SF_006OG000004lmDN"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -239,7 +238,7 @@ const random728CandiBanner =
   </a>
 
 <a
-  href="https://t.ajrkmx1.com/384478/8780/32497?po=6533&aff_sub5=SF_006OG000004lmDN"
+  href="https://t.vlmai-1.com/384478/9022/39455?aff_sub5=SF_006OG000004lmDN"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
