@@ -13,7 +13,7 @@ export const metadata = {
 function TopPromoBar() {
   return (
     <a
-      href="https://t.crdtg3.com/384478/5165?aff_sub5=SF_006OG000004lmDN"
+      href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
       className="ai-gf-banner"
     >
       <span className="ai-gf-banner-text">
