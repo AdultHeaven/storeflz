@@ -152,7 +152,9 @@ const random728Banner =
 
   const desktopCandiBanners = [
   // 'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
+  // 'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
+  'https://www.imglnkx.com/3785/008689A_GDAT_18_ALL_EN_125_L.jpg',
+  'https://www.imglnkx.com/3785/006362A_GDAT_18_ALL_EN_125_L.jpg'
 ];
 
 //   const desktopCandiBanners = [
