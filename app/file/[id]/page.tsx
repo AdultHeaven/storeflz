@@ -189,7 +189,7 @@ const random728CandiBanner =
 
   return (
     <>
-    {/* <AffiliatePop /> */}
+    <AffiliatePop />
 {/* <CandyVideoOverlay /> */}
 {/* <StripchatOverlay /> */}
          {/* <Script
