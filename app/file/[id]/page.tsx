@@ -237,7 +237,7 @@ const random728CandiBanner =
                        <div className="fx-banner-wrap">
 
   <a
-    href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
+    href="https://candyai.gg/characters/new?via=lxrukg"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -251,7 +251,7 @@ const random728CandiBanner =
   </a>
 
 <a
-  href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
+  href="https://candyai.gg/characters/new?via=lxrukg"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
