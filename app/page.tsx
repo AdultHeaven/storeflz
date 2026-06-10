@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE ?? "https://wrkr.storeflz.com";
+  process.env.NEXT_PUBLIC_API_BASE ?? "https://postgres-storelinkcreatenew.ahapi.workers.dev";
 const SITE_BASE =
   process.env.NEXT_PUBLIC_SITE_BASE ?? "https://storeflz.com";
 
