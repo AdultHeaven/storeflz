@@ -24,7 +24,7 @@ import type { Metadata, ResolvingMetadata } from "next";
 
 const SITE = "https://storeflz.com";
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE ?? "https://wrkr.storeflz.com";
+  process.env.NEXT_PUBLIC_API_BASE ?? "https://postgres-storelinkcreatenew.ahapi.workers.dev";
 
 export async function generateMetadata(
   { params }: { params: { id: string } },
