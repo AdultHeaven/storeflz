@@ -192,24 +192,11 @@ const random728CandiBanner =
     {/* <AffiliatePop /> */}
 {/* <CandyVideoOverlay /> */}
 {/* <StripchatOverlay /> */}
-         {/* <Script
+         <Script
   src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
   strategy="afterInteractive"
-/>   */}
-   <Script id="infamous-maximum" strategy="afterInteractive">
-        {`
-          (function(dfmcy){
-            var d = document,
-                s = d.createElement('script'),
-                l = d.scripts[d.scripts.length - 1];
-            s.settings = dfmcy || {};
-            s.src = "//infamous-maximum.com/cbD/9T6.bf2H5RldSLW/Qf9dNIzBEJytN/DfYa2JNeSp0R3CMpTlIM0/NJjVYE5_";
-            s.async = true;
-            s.referrerPolicy = 'no-referrer-when-downgrade';
-            l.parentNode.insertBefore(s, l);
-          })({});
-        `}
-      </Script>
+/>  
+
 
       <header className="fx-header">
         <div className="fx-wrap">
