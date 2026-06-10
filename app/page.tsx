@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE ?? "https://postgres-storelinkcreate.ahapi.workers.dev";
+  process.env.NEXT_PUBLIC_API_BASE ?? "https://wrkr.storeflz.com";
 const SITE_BASE =
   process.env.NEXT_PUBLIC_SITE_BASE ?? "https://storeflz.com";
 
@@ -87,7 +87,7 @@ export default function HomePage() {
                   <input
                     className="input"
                     type="url"
-                    placeholder="https://gofile.io/d/..."
+                    placeholder="https://domain.com/d/..."
                     value={v}
                     onChange={(e)=>updateRow(i, e.target.value)}
                   />
