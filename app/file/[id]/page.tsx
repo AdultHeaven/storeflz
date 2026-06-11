@@ -103,9 +103,8 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
 // ];
 const mobileCandiBanners = [
-  'https://www.imglnkx.com/10139/300-x-100---AI-PORN-IS-HERE-3.gif',
-  'https://ads.storeflz.com/EN_02_300x100_video_banner_candy_06.mp4',
-  'https://ads.storeflz.com/EN_03_300x100_video_banner_candy_03.mp4'
+    'https://www.imglnkx.com/9410/SakuraLive_20241127_300x100_2354012.gif',
+
 ];
 
 // const mobileCandiBanners = [
@@ -115,9 +114,7 @@ const mobileCandiBanners = [
 // ];
   const mobileJerkMateBanners = [
   // 'https://www.imglnkx.com/8780/000110F_JRKM_18_ALL_EN_64_L.gif',
-  'https://www.imglnkx.com/779/006672C_MYFC_18_ALL_EN_64_L.gif',
-  'https://www.imglnkx.com/779/006611AX_FCAM_18_ALL_EN_64_L.gif',
-'https://www.imglnkx.com/779/006672B_MYFC_18_ALL_EN_64_L.gif'
+  'https://www.imglnkx.com/9410/SakuraLive_20241127_300x100_2354012.gif',
 ];
 const randomJerkmateBanner =
   mobileJerkMateBanners[Math.floor(Math.random() * mobileJerkMateBanners.length)];
@@ -150,8 +147,8 @@ const random728Banner =
 
 
   const desktopCandiBanners = [
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-01.jpg',
+  'https://www.imglnkx.com/9410/SakuraLive_20241127_728x90_1354107_b.gif',
+  'https://www.imglnkx.com/9410/SakuraLive_20241127_728x90_2354015.gif'
 ];
 
 //   const desktopCandiBanners = [
@@ -224,7 +221,7 @@ const random728CandiBanner =
                        <div className="fx-banner-wrap">
 
   <a
-    href="https://candyai.gg/characters/new?via=lxrukg"
+    href="https://t.acrsmartcam.com/384478/9410/0?po=6533&aff_sub5=SF_006OG000004lmDN"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -238,7 +235,7 @@ const random728CandiBanner =
   </a>
 
 <a
-  href="https://candyai.gg/characters/new?via=lxrukg"
+  href="https://t.acrsmartcam.com/384478/9410/0?po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"
