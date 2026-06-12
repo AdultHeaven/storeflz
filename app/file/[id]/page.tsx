@@ -103,7 +103,8 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x250_C_07.jpg',
 // ];
 const mobileCandiBanners = [
-    'https://www.imglnkx.com/9410/SakuraLive_20241127_300x100_2354012.gif',
+    'https://www.imglnkx.com/9248/300-100-3.jpeg',
+    'https://www.imglnkx.com/9248/300-100-4.jpeg'
 
 ];
 
@@ -147,8 +148,9 @@ const random728Banner =
 
 
   const desktopCandiBanners = [
-  'https://www.imglnkx.com/9410/SakuraLive_20241127_728x90_1354107_b.gif',
-  'https://www.imglnkx.com/9410/SakuraLive_20241127_728x90_2354015.gif'
+  'https://simp6.cuckcapital.cr/images4/Banner_72890-37b63df5aae990253.jpg',
+  'https://simp6.cuckcapital.cr/images4/Banner_72890-4ed4747552623a50f.jpg',
+  'https://simp6.cuckcapital.cr/images4/Banner_72890-14db41315d3a1d435.jpg'
 ];
 
 //   const desktopCandiBanners = [
@@ -221,7 +223,7 @@ const random728CandiBanner =
                        <div className="fx-banner-wrap">
 
   <a
-    href="https://t.acrsmartcam.com/384478/9410/0?po=6533&aff_sub5=SF_006OG000004lmDN"
+    href="https://t.anadw.link/384478/9248/35232?po=6532&aff_sub5=SF_006OG000004lmDN"
     target="_blank"
     rel="nofollow noopener noreferrer"
     className="fx-banner-desktop"
@@ -235,7 +237,7 @@ const random728CandiBanner =
   </a>
 
 <a
-  href="https://t.acrsmartcam.com/384478/9410/0?po=6533&aff_sub5=SF_006OG000004lmDN"
+  href="https://t.anadw.link/384478/9248/35232?po=6532&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
   rel="nofollow noopener noreferrer"
   className="fx-banner-mobile"

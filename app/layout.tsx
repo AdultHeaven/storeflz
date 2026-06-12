@@ -13,15 +13,15 @@ export const metadata = {
 function TopPromoBar() {
   return (
     <a
-      href="https://t.acrsmartcam.com/384478/9410/0?po=6533&aff_sub5=SF_006OG000004lmDN"
+      href="https://t.anadw.link/384478/9248/35232?po=6532&aff_sub5=SF_006OG000004lmDN"
       className="ai-gf-banner"
     >
       <span className="ai-gf-banner-text">
-  🎌 Find Your Japanese Girlfriend ❤️
+  1000000+ premium videos in one subscription
       </span>
 
       <span className="ai-gf-banner-button">
-        TRY NOW
+        GET ACCESS
       </span>
     </a>
   );
