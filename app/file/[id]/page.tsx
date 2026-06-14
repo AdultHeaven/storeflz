@@ -201,6 +201,7 @@ const random728CandiBanner =
         <div className="fx-wrap">
           <a className="fx-brand" href="/"><span className="fx-logo">🪄</span><span>Storeflz</span></a>
           <nav className="fx-nav"><a className="fx-nav-link" href="/">Create</a></nav>
+                      <a className="nav-link" href="https://tofreeporn.com">ToFreePorn</a>
         </div>
       </header>
 
