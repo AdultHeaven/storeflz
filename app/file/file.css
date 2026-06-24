@@ -210,17 +210,6 @@ body{
   }
 }
 
-@media (max-width:480px){
-  /* Stack copy URL input and button vertically on narrow viewports to prevent overflow */
-  .fx-share {
-    grid-template-columns: 1fr !important;
-    gap: 8px !important;
-  }
-  .fx-bottom {
-    margin-top: 18px !important;
-  }
-}
-
 .dev-notice {
   margin-top: 18px;
   padding: 14px 16px;
