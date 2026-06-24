@@ -85,6 +85,19 @@ body{
   .link-row{grid-template-columns:36px 1fr 36px}
   .icon-btn{height:40px;width:40px}
   .result-url-row{grid-template-columns:1fr}
+
+  /* Header mobile optimization */
+  .site-header .header-wrap { padding: 10px 0; }
+  .brand { font-size: 14px; gap: 6px; }
+  .brand .logo { font-size: 1.15rem; }
+  .nav { gap: 6px; }
+  .nav-link { padding: 6px 10px; font-size: 12.5px; }
+}
+
+@media (max-width:480px){
+  .brand .logo {
+    display: none !important;
+  }
 }
 
 

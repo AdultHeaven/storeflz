@@ -17,7 +17,8 @@ function TopPromoBar() {
       className="ai-gf-banner"
     >
       <span className="ai-gf-banner-text">
-  1000000+ premium videos in one subscription
+        <span className="ai-gf-banner-text-desktop">1000000+ premium videos in one subscription</span>
+        <span className="ai-gf-banner-text-mobile">1M+ Premium Videos</span>
       </span>
 
       <span className="ai-gf-banner-button">

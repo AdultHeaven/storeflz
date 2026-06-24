@@ -216,8 +216,10 @@ const random728CandiBanner =
       <header className="fx-header">
         <div className="fx-wrap">
           <a className="fx-brand" href="/"><span className="fx-logo">🪄</span><span>Storeflz</span></a>
-          <nav className="fx-nav"><a className="fx-nav-link" href="/">Create</a></nav>
-                      <a className="nav-link" href="https://tofreeporn.com">ToFreePorn</a>
+          <nav className="fx-nav">
+            <a className="fx-nav-link" href="/">Create</a>
+            <a className="fx-nav-link" href="https://tofreeporn.com">ToFreePorn</a>
+          </nav>
         </div>
       </header>
 
@@ -334,7 +336,7 @@ const random728CandiBanner =
           <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
 
           {/* Dynamic Copywriting to avoid thin content (moved below links) */}
-          <div style={{ marginTop: "24px", padding: "20px 8px 0", fontSize: "14px", lineHeight: "1.6", borderTop: "1px solid var(--stroke)" }}>
+          <div className="fx-seo-desc" style={{ marginTop: "24px", padding: "20px 8px 0", fontSize: "14px", lineHeight: "1.6", borderTop: "1px solid var(--stroke)" }}>
             <p style={{ margin: "0 0 10px", color: "var(--muted)", opacity: 0.9 }}>
               Looking for safe and fast download mirrors for <strong>{data.title || data.id}</strong>? Above is a verified directory of mirror server links hosting this file. Mirroring files ensures that if one server becomes congested or goes offline, you can download the contents from another host.
             </p>
@@ -345,7 +347,7 @@ const random728CandiBanner =
 
           {/* Contextual Download Tips (moved below links) */}
           {(hasGofile || hasPixeldrain || hasMega) && (
-            <div style={{ margin: "18px 8px 10px", padding: "12px 14px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "10px" }}>
+            <div className="fx-server-tips" style={{ margin: "18px 8px 10px", padding: "12px 14px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "10px" }}>
               <div style={{ fontWeight: "700", color: "var(--muted)", fontSize: "13.5px", marginBottom: "8px", display: "flex", alignItems: "center", gap: "6px" }}>
                 <span>💡</span> Helpful Server Instructions:
               </div>
@@ -391,7 +393,7 @@ const random728CandiBanner =
 {/* <AdBanner/> */}
 
           {/* FAQ Section */}
-          <div style={{ marginTop: "32px", padding: "20px 8px 8px", borderTop: "1px solid var(--stroke)" }}>
+          <div className="fx-faq-section" style={{ marginTop: "32px", padding: "20px 8px 8px", borderTop: "1px solid var(--stroke)" }}>
             <h2 style={{ fontSize: "16px", fontWeight: "700", marginBottom: "16px", color: "var(--muted)" }}>Download Frequently Asked Questions</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <div>
