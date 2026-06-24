@@ -132,12 +132,9 @@ const meta = metaEntry?.[1];
                 <div className="fx-texts">
                   <div className="fx-host">{domain}</div>
 
-
                   <div className="fx-url" title={url}>
                     {url}
                   </div>
-                </div>
-              </div>
 
                   {/* ✅ Metadata badges */}
                   {meta && (
@@ -146,10 +143,12 @@ const meta = metaEntry?.[1];
                         {capitalize(meta.ads)} Ads
                       </span>
                       <span className={`badge rel-${meta.reliability}`}>
-                        {capitalize(meta.reliability)} Availabily
+                        {capitalize(meta.reliability)} Availability
                       </span>
                     </div>
                   )}
+                </div>
+              </div>
               <div className="fx-actions">
                 <a
                   className="fx-btn fx-primary"

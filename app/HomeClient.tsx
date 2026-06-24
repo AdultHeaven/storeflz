@@ -32,13 +32,37 @@ export default function HomeClient() {
       const mirrors = links.map((s) => s.trim()).filter(Boolean);
       if (!title.trim()) throw new Error("Please enter a title.");
       if (mirrors.length === 0) throw new Error("Add at least one link.");
-      const res = await fetch(`${API_BASE}/add`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title: title.trim(), mirrors })
-      });
+      
+      // Retry logic for transient database connection / server errors
+      let res: Response | null = null;
+      let lastErr: any = null;
+      const maxRetries = 2;
+
+      for (let attempt = 0; attempt <= maxRetries; attempt++) {
+        try {
+          res = await fetch(`${API_BASE}/add`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ title: title.trim(), mirrors })
+          });
+          if (res.ok) break; // success!
+          
+          const errorJson = await res.json().catch(() => ({}));
+          lastErr = new Error(errorJson?.error || `Server returned status ${res.status}`);
+        } catch (fetchErr: any) {
+          lastErr = fetchErr;
+        }
+
+        if (attempt < maxRetries) {
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+        }
+      }
+
+      if (!res || !res.ok) {
+        throw lastErr || new Error("Failed to create link");
+      }
+
       const j = await res.json();
-      if (!res.ok) throw new Error(j?.error || "Failed to create link");
       const url = `${SITE_BASE}/file/${encodeURIComponent(j.id)}`;
       setShareUrl(url);
     } catch (err: any) {

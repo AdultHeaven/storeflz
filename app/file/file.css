@@ -111,7 +111,7 @@ body{
   /* Header mobile optimization */
   .fx-header .fx-wrap { padding: 10px 0; }
   .fx-brand { font-size: 14px; gap: 6px; }
-  .fx-logo { font-size: 1.15rem; }
+  .fx-logo { display: none !important; }
   .fx-nav { gap: 6px; }
   .fx-nav-link { padding: 6px 10px; font-size: 12.5px; }
 
@@ -144,11 +144,7 @@ body{
   }
 }
 
-@media (max-width:480px){
-  .fx-logo {
-    display: none !important;
-  }
-}
+
 /* copy button states & icons */
 .fx-copy-btn {
   display: inline-flex;
@@ -595,6 +591,15 @@ body{
     gap: 4px; /* Tighter gap on mobile */
   }
 
+  .fx-meta {
+    position: static !important;
+    display: flex !important;
+    margin-top: 4px !important;
+    gap: 4px !important;
+    top: auto !important;
+    right: auto !important;
+  }
+
   .badge {
     font-size: 7px;      /* Micro text */
     padding: 1px 4px;    /* Shorter height */
@@ -726,3 +731,57 @@ body{
   }
 }
 
+@media (max-width: 385px) {
+  /* Shrink outer container margins/padding */
+  .fx-wrap {
+    width: 95% !important;
+  }
+  .fx-card {
+    padding: 10px 8px !important;
+  }
+  
+  /* Shrink row layout, padding, and gaps */
+  .fx-row {
+    padding: 8px 8px !important;
+    gap: 4px !important;
+  }
+  .fx-left {
+    gap: 6px !important;
+  }
+  
+  /* Shrink row elements */
+  .fx-num {
+    width: 18px !important;
+    height: 18px !important;
+    flex: 0 0 18px !important;
+    font-size: 9px !important;
+    border-radius: 4px !important;
+  }
+  .fx-ico {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .fx-host {
+    font-size: 12.5px !important;
+    max-width: 90px !important; /* Truncates long domain names to prevent push overflow */
+  }
+  
+  /* Shrink actions and buttons */
+  .fx-actions {
+    gap: 4px !important;
+  }
+  .fx-btn {
+    padding: 6px 8px !important;
+    font-size: 11.5px !important;
+    border-radius: 6px !important;
+  }
+  .fx-copy-btn {
+    padding: 6px 8px !important;
+  }
+  
+  /* Shrink metadata badges text */
+  .badge {
+    font-size: 6.5px !important;
+    padding: 1px 3px !important;
+  }
+}
