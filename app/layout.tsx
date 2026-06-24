@@ -21,7 +21,7 @@ function TopPromoBar() {
       </span>
 
       <span className="ai-gf-banner-button">
-        GET ACCESS
+        GET ACCESS →
       </span>
     </a>
   );

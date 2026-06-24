@@ -60,6 +60,7 @@
 //   );
 // }
 "use client";
+import { useState } from "react";
 
 function host(u: string) {
   try {
@@ -102,6 +103,9 @@ export default function MirrorList({
   mirrors: string[];
   pageUrl: string;
 }) {
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const [copiedPage, setCopiedPage] = useState(false);
+
   return (
     <>
       <ul className="fx-list">
@@ -121,7 +125,7 @@ const meta = metaEntry?.[1];
                 <img
                   className="fx-ico"
                   src={favicon(url)}
-                  alt=""
+                  alt={`${domain} mirror source`}
                   loading="lazy"
                 />
 
@@ -157,18 +161,29 @@ const meta = metaEntry?.[1];
                 </a>
 
                 <button
-                  className="fx-btn fx-ghost"
-                  onClick={async (e) => {
+                  className={`fx-btn fx-ghost fx-copy-btn ${copiedIndex === i ? "copied" : ""}`}
+                  onClick={async () => {
                     await navigator.clipboard.writeText(url);
-                    const btn = e.currentTarget;
-                    const old = btn.textContent;
-                    btn.textContent = "Copied";
+                    setCopiedIndex(i);
                     setTimeout(() => {
-                      btn.textContent = old || "Copy";
-                    }, 900);
+                      setCopiedIndex(null);
+                    }, 1200);
                   }}
+                  title="Copy link to clipboard"
                 >
-                  Copy
+                  <span className="fx-btn-icon-wrapper">
+                    {copiedIndex === i ? (
+                      <svg className="fx-icon-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#18c37a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    ) : (
+                      <svg className="fx-icon-copy" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                    )}
+                  </span>
+                  <span className="fx-btn-text">{copiedIndex === i ? "Copied" : "Copy"}</span>
                 </button>
               </div>
             </li>
@@ -177,17 +192,31 @@ const meta = metaEntry?.[1];
       </ul>
 
       <div className="fx-bottom">
-        {/* <a href="/" className="fx-btn fx-lite">
-          ← Create another
-        </a> */}
-
         <div className="fx-share">
           <input className="fx-input" readOnly value={pageUrl} />
           <button
-            className="fx-btn fx-ghost"
-            onClick={() => navigator.clipboard.writeText(pageUrl)}
+            className={`fx-btn fx-ghost fx-copy-btn ${copiedPage ? "copied" : ""}`}
+            onClick={async () => {
+              await navigator.clipboard.writeText(pageUrl);
+              setCopiedPage(true);
+              setTimeout(() => {
+                setCopiedPage(false);
+              }, 1200);
+            }}
           >
-            Copy page URL
+            <span className="fx-btn-icon-wrapper">
+              {copiedPage ? (
+                <svg className="fx-icon-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#18c37a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              ) : (
+                <svg className="fx-icon-copy" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              )}
+            </span>
+            <span className="fx-btn-text">{copiedPage ? "Copied" : "Copy page URL"}</span>
           </button>
         </div>
       </div>
