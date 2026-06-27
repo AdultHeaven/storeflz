@@ -251,7 +251,7 @@ const meta = metaEntry?.[1];
           {/* Telegram */}
           <a
             className="fx-social-btn telegram"
-            href={`https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent("Download mirrors for " + (document.title || "files"))}`}
+            href={`https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent("Download mirrors for " + (typeof document !== 'undefined' ? document.title : "files"))}`}
             target="_blank"
             rel="noopener noreferrer"
             title="Share on Telegram"
@@ -277,7 +277,7 @@ const meta = metaEntry?.[1];
           {/* Twitter / X */}
           <a
             className="fx-social-btn twitter"
-            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent("Download mirrors for " + (document.title || "files"))}`}
+            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent("Download mirrors for " + (typeof document !== 'undefined' ? document.title : "files"))}`}
             target="_blank"
             rel="noopener noreferrer"
             title="Share on X"
