@@ -89,13 +89,35 @@ export async function generateMetadata(
     ],
   };
 }
+export const revalidate = 2592000; // Cache page for 30 days
 
-export const revalidate = 2592000; // Cache the page for 30 days (in seconds)
+function formatDate(dateStr?: string) {
+  if (!dateStr) return null;
+  try {
+    const isoStr = dateStr.includes("T") ? dateStr : dateStr.replace(" ", "T");
+    const d = new Date(isoStr);
+    return isNaN(d.getTime()) ? null : d.toLocaleDateString();
+  } catch {
+    return null;
+  }
+}
 
 export default async function FileViewPage({ params }: { params: { id: string } }) {
   const res = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, {
     next: { revalidate: 2592000 },
-  });;
+  }).catch(() => null);
+
+  if (!res || !res.ok) {
+    notFound();
+  }
+
+  let data: Data;
+  try {
+    data = (await res.json()) as Data;
+  } catch (err) {
+    console.error("Failed to parse JSON file data:", err);
+    notFound();
+  }
 
 //   const mobileBanners = [
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset5.gif',
@@ -164,12 +186,9 @@ const random728Banner =
 const random728CandiBanner =
   desktopCandiBanners[Math.floor(Math.random() * desktopCandiBanners.length)];
 
-  
-  if (!res.ok) {
-    notFound();
-  }
 
-  const data = (await res.json()) as Data;
+
+  const formattedDate = formatDate(data.created_at);
   const pageUrl = `https://storeflz.com/file/${data.id}`;
 
   const hostnames = (data.mirrors || []).map((m) => {
@@ -235,7 +254,7 @@ const random728CandiBanner =
             </p> */}
             <p className="fx-muted">
   Select a link below to continue.
-  {data.created_at ? <> Added on {new Date(data.created_at).toLocaleDateString()}</> : null}
+  {formattedDate ? <> Added on {formattedDate}</> : null}
 </p>
 
           </div>
@@ -335,7 +354,7 @@ const random728CandiBanner =
 
 </div>
   */}
-          <MirrorList mirrors={data.mirrors} pageUrl={pageUrl} />
+          <MirrorList mirrors={data.mirrors || []} pageUrl={pageUrl} />
 
           {/* Dynamic Copywriting to avoid thin content (moved below links) */}
           <div className="fx-seo-desc" style={{ marginTop: "24px", padding: "20px 8px 0", fontSize: "14px", lineHeight: "1.6", borderTop: "1px solid var(--stroke)" }}>
