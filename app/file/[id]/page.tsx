@@ -35,8 +35,8 @@ export async function generateMetadata(
 
   try {
     const r = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, {
-      // cache a bit so bots don’t hammer the API
-      next: { revalidate: 300 },
+      // cache for 30 days
+      next: { revalidate: 2592000 },
     });
     if (r.ok) {
       const d = await r.json();
@@ -90,10 +90,12 @@ export async function generateMetadata(
   };
 }
 
-export const dynamic = "force-dynamic";
+export const revalidate = 2592000; // Cache the page for 30 days (in seconds)
 
 export default async function FileViewPage({ params }: { params: { id: string } }) {
-  const res = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, { cache: "no-store" });;
+  const res = await fetch(`${API_BASE}/file/${encodeURIComponent(params.id)}`, {
+    next: { revalidate: 2592000 },
+  });;
 
 //   const mobileBanners = [
 //   'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_300x250_Hasset5.gif',
