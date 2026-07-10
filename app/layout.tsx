@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Suspense fallback={null}>
             <PostHogPageView />
           </Suspense>
-          <TopPromoBar />
+          {/* <TopPromoBar /> */}
           {children}
         </PostHogProvider>
       </body>
