@@ -9,6 +9,7 @@ import TrafficStarsPush from '../../comp/TrafficStarsPush';
 // import AffiliatePop from '../../comp/AffiliatePop';
 import CandyVideoOverlay from '../../comp/CandyVideoOverlay';
 import StripchatOverlay from '../../comp/stripchatOverlay';
+import CreateAiGirlfriendPanel from '../../comp/CreateAiGirlfriendPanel';
 import { notFound } from "next/navigation";
 import '../CandyVideoOverlay.css';
 
@@ -119,67 +120,6 @@ export default async function FileViewPage({ params }: { params: { id: string } 
     notFound();
   }
 
-  const mobileCandiBanners = [
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_01.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_06.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_300x100_banner_03.gif',
-];
-// const mobileCandiBanners = [
-//     'https://www.imglnkx.com/9248/300-100-3.jpeg',
-//     'https://www.imglnkx.com/9248/300-100-4.jpeg'
-
-// ];
-
-// const mobileCandiBanners = [
-//   'https://video.mavrtracktor.com/b/465ce5e1.gif',
-//   'https://video.mavrtracktor.com/b/454a0a9a.gif',
-//   'https://video.mavrtracktor.com/b/758f1d7a.png',
-// ];
-  const mobileJerkMateBanners = [
-  // 'https://www.imglnkx.com/8780/000110F_JRKM_18_ALL_EN_64_L.gif',
-  'https://www.imglnkx.com/9410/SakuraLive_20241127_300x100_2354012.gif',
-];
-const randomJerkmateBanner =
-  mobileJerkMateBanners[Math.floor(Math.random() * mobileJerkMateBanners.length)];
-
-  const randomCandiBanner =
-  mobileCandiBanners[Math.floor(Math.random() * mobileCandiBanners.length)];
-  const isVideo = randomCandiBanner.endsWith('.mp4');
-
-// const desktopBanners = [
-
-//   'https://www.imglnkx.com/8780/000110AH_JRKM_18_ALL_EN_22646_L.jpg',
-//     'https://www.imglnkx.com/8780/000110AI_JRKM_18_ALL_EN_22646_L.jpg',
-//   'https://www.imglnkx.com/8780/009195A_JRKM_18_ALL_EN_22646_L.jpg'
-// ];
-const desktopCandiBanners = [
-  'https://www.imglnkx.com/9022/728x90-SFW-banner-03.jpg',
-  'https://www.imglnkx.com/9022/728x90-SFW-banner-01.jpg',
-  'https://www.imglnkx.com/9022/728x90-SFW-banner-02.jpg',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-02.jpg',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-01.jpg',
-  'https://www.imglnkx.com/9022/CandyAI-20251216_728x90-SFW-banner-03.jpg',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h2_728x90_09_cmai.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b2h1_728x90_04_cmai.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Cartoon-Hentai_728x90_b3h1_728x90_06_cmai.gif',
-  'https://www.imglnkx.com/9022/CandyAI_202507_Realistic_tired_of_porn_728x90_banner_08.gif',
-];
-
-// const random728Banner =
-//   desktopBanners[Math.floor(Math.random() * desktopBanners.length)];
-
-
-//   const desktopCandiBanners = [
-//   'https://simp6.cuckcapital.cr/images4/Banner_72890-37b63df5aae990253.jpg',
-//   'https://simp6.cuckcapital.cr/images4/Banner_72890-4ed4747552623a50f.jpg',
-//   'https://simp6.cuckcapital.cr/images4/Banner_72890-14db41315d3a1d435.jpg'
-// ];
-
-const random728CandiBanner =
-  desktopCandiBanners[Math.floor(Math.random() * desktopCandiBanners.length)];
-
-
-
   const formattedDate = formatDate(data.created_at);
   const pageUrl = `https://storeflz.com/file/${data.id}`;
 
@@ -245,108 +185,15 @@ const random728CandiBanner =
 {data.created_at ? <> Created on {new Date(data.created_at).toLocaleDateString()}</> : null}
             </p> */}
             <p className="fx-muted">
-  Select a link below to continue.
-  {formattedDate ? <> Added on {formattedDate}</> : null}
-</p>
-
+              Select a link below to continue.
+              {formattedDate ? <> Added on {formattedDate}</> : null}
+            </p>
           </div>
 
-          {/* interactive part */}
-                       <div className="fx-banner-wrap">
-
-  <a
-    href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
-    target="_blank"
-    rel="nofollow noopener noreferrer"
-    className="fx-banner-desktop"
-  >
- <img
-    src={random728CandiBanner}
-    alt="Candy AI"
-    width="728"
-          height="90"
-  />
-  </a>
-
-<a
-  href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
-  target="_blank"
-  rel="nofollow noopener noreferrer"
-  className="fx-banner-mobile"
->
-  
-
-  {isVideo ? (
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    width="300"
-    height="100"
-  >
-    <source src={randomCandiBanner} type="video/mp4" />
-  </video>
-) : (
-  <img
-    src={randomCandiBanner}
-    alt="Candy AI"
-    width="300"
-    height="100"
-  />
-)}
-</a>
-
-</div>  
- {/*
-                      <div className="fx-banner-wrap">
-
-  <a
-    href="https://t.acrsmartcam.com/384478/3778/8996?po=6533&aff_sub5=SF_006OG000004lmDN"
-    target="_blank"
-    rel="nofollow noopener noreferrer"
-    className="fx-banner-desktop"
-  >
- <img
-    src={random728CandiBanner}
-    alt="Candy AI"
-    width="728"
-          height="90"
-  />
-  </a>
-
-<a
-  href="https://t.acrsmartcam.com/384478/3778/8996?po=6533&aff_sub5=SF_006OG000004lmDN"
-  target="_blank"
-  rel="nofollow noopener noreferrer"
-  className="fx-banner-mobile"
->
-  
-
-  {isVideo ? (
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    width="300"
-    height="100"
-  >
-    <source src={randomCandiBanner} type="video/mp4" />
-  </video>
-) : (
-  <img
-    src={randomCandiBanner}
-    alt="Candy AI"
-    width="300"
-    height="100"
-  />
-)}
-</a>
-
-</div>
-  */}
           <MirrorList mirrors={data.mirrors || []} pageUrl={pageUrl} />
+
+          {/* Create AI Girlfriend Panel */}
+          <CreateAiGirlfriendPanel />
 
           {/* Dynamic Copywriting to avoid thin content (moved below links) */}
           <div className="fx-seo-desc" style={{ marginTop: "24px", padding: "20px 8px 0", fontSize: "14px", lineHeight: "1.6", borderTop: "1px solid var(--stroke)" }}>

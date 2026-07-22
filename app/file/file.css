@@ -126,6 +126,7 @@ body{
   .fx-list {
     order: 2 !important;
   }
+  .aigf-wrapper,
   .fx-banner-wrap {
     order: 3 !important;
     margin: 20px 0 10px !important;
@@ -144,7 +145,6 @@ body{
   }
 }
 
-
 /* copy button states & icons */
 .fx-copy-btn {
   display: inline-flex;
@@ -159,8 +159,6 @@ body{
   align-items: center;
   justify-content: center;
 }
-
-
 
 /* Copied state: hide copy icon, show check icon */
 .fx-copy-btn.copied {
@@ -201,7 +199,6 @@ body{
   .fx-num{width:22px;height:22px;font-size:11px;border-radius:7px}
   .fx-bottom{grid-template-columns:1fr}
 }
-
 
 @media (max-width:640px){
   /* Hide the long URL text to prevent horizontal overflow since the host header is already visible */
@@ -247,7 +244,6 @@ body{
 }
 
 /* Mobile optimization */
-
 @media (max-width: 600px) {
   .dev-notice {
     padding: 12px 14px;
@@ -258,7 +254,6 @@ body{
     font-size: 12.5px;
   }
 }
-
 
 /* ROW */
 .fx-row {
@@ -356,16 +351,6 @@ body{
   color: var(--text);
 }
 
-/* 🔥 EDGE BADGES */
-.fx-meta {
-  position: absolute;
-  top: -8px;        /* slightly outside */
-  right: 12px;
-
-  display: flex;
-  gap: 6px;
-}
-
 /* BADGES */
 .badge {
   font-size: 9px;
@@ -380,12 +365,10 @@ body{
   background: rgba(34,197,94,0.15);
   color: #4ade80;
 }
-
 .ads-medium {
   background: rgba(234,179,8,0.15);
   color: #facc15;
 }
-
 .ads-high {
   background: rgba(239,68,68,0.15);
   color: #f87171;
@@ -396,18 +379,16 @@ body{
   background: rgba(239,68,68,0.15);
   color: #f87171;
 }
-
 .rel-medium {
   background: rgba(234,179,8,0.15);
   color: #facc15;
 }
-
 .rel-high {
   background: rgba(34,197,94,0.15);
   color: #4ade80;
 }
 
-/* 📱 MOBILE FIXES */
+/* MOBILE FIXES */
 @media (max-width: 480px) {
   .fx-row {
     padding: 12px;
@@ -428,18 +409,15 @@ body{
   }
 }
 
-
-/* Container for the badges */
 .fx-meta {
   position: absolute;
-  top: -10px;        /* Moves it up to sit on the border */
+  top: -10px;
   right: 14px;
   display: flex;
   gap: 6px;
-  z-index: 2;        /* Ensures it stays above everything */
+  z-index: 2;
 }
 
-/* Base Badge Style */
 .badge {
   font-size: 9px;
   font-weight: 800;
@@ -447,15 +425,11 @@ body{
   letter-spacing: 0.5px;
   padding: 3px 8px;
   border-radius: 6px;
-  
-  /* Glass effect */
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔥 Better Color Schemes */
-/* Ads */
 .ads-low { 
   background: rgba(34, 197, 94, 0.25); 
   color: #4ade80; 
@@ -472,7 +446,6 @@ body{
   border-color: rgba(248, 113, 113, 0.3);
 }
 
-/* Reliability */
 .rel-high { 
   background: rgba(59, 130, 246, 0.25); 
   color: #60a5fa; 
@@ -484,147 +457,12 @@ body{
   border-color: rgba(192, 132, 252, 0.3);
 }
 
-/* Ensure the row doesn't clip the badges */
-.fx-row {
-  overflow: visible !important; /* CRITICAL: This allows badges to float outside */
-  position: relative;
-  /* rest of your row styles... */
-}
-
-/* Update the Row to handle the badge placement better */
-.fx-row {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 16px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--stroke);
-  margin-bottom: 12px;
-  gap: 16px;
-}
-
-/* Updated Meta Container: No more absolute positioning */
-.fx-meta {
-  display: flex;
-  gap: 8px;
-  margin-left: auto; /* Pushes badges to the right, before buttons */
-}
-
-/* Cleaner, more modern Badge style */
-.badge {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 4px 8px;
-  border-radius: 6px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-/* Adding a small status dot to the badge */
-.badge::before {
-  content: '';
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-/* Color Profiles */
-.ads-low { background: rgba(34, 197, 94, 0.1); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.2); }
-.ads-medium { background: rgba(234, 179, 8, 0.1); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.2); }
-.ads-high { background: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); }
-
-.rel-high { background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.2); }
-
-/* Mobile: Stack them or hide extra info */
-@media (max-width: 640px) {
-  .fx-meta {
-    display: none; /* Often cleaner to hide detailed meta on tiny screens */
-  }
-}
-
-/* Container to keep them side-by-side */
 .fx-host-group {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-wrap: wrap; /* Allows badges to move below host on tiny screens if needed */
+  flex-wrap: wrap;
 }
-
-.fx-meta {
-  display: flex;
-  gap: 4px;
-}
-
-/* Base Badge (Desktop size) */
-.badge {
-  font-size: 10px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-/* 📱 Mobile Specific Shrinking */
-@media (max-width: 640px) {
-  .fx-host-group {
-    gap: 4px; /* Tighter gap on mobile */
-  }
-
-  .fx-meta {
-    position: static !important;
-    display: flex !important;
-    margin-top: 4px !important;
-    gap: 4px !important;
-    top: auto !important;
-    right: auto !important;
-  }
-
-  .badge {
-    font-size: 7px;      /* Micro text */
-    padding: 1px 4px;    /* Shorter height */
-    letter-spacing: 0;   /* Save space */
-    border-radius: 3px;
-  }
-
-  /* Optionally hide the "Ads" or "Reliability" text to save even more space */
-  .badge::before {
-    width: 3px;          /* Smaller dot */
-    height: 3px;
-  }
-  
-  /* If space is still too tight, we can hide the text and just show the dot/color */
-  /* .badge { width: 12px; overflow: hidden; } */
-}
-
-/* Make sure the host name doesn't grow too much */
-.fx-host {
-  max-width: 150px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.fx-btn {
-  padding: 7px 12px;
-  line-height: 1;
-}
-
-/* CURRENT Colors (A bit loud) */
-.ads-low { color: #4ade80; }
-.rel-medium { color: #c084fc; /* purple */ }
-
-/* 🔥 BETTER Colors (Desaturated, More Premium) */
-.ads-low { color: #82da9d; /* more sea-foam, less lime */ }
-.rel-medium { color: #a5b4fc; /* soft lavender/blue, less intense purple */ }
 
 .dev-notice-link {
   display: flex;
@@ -645,35 +483,21 @@ body{
   margin: 0 0 24px;
 }
 
-/* COMMON */
 .fx-banner-desktop,
 .fx-banner-mobile {
   overflow: hidden;
   border-radius: 18px;
-
   border: 1px solid rgba(255,255,255,0.08);
-
   background: rgba(255,255,255,0.03);
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.35),
-    inset 0 1px 0 rgba(255,255,255,0.04);
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .fx-banner-desktop:hover,
 .fx-banner-mobile:hover {
   transform: translateY(-2px);
-
   border-color: rgba(255,255,255,0.14);
-
-  box-shadow:
-    0 14px 40px rgba(0,0,0,0.45),
-    0 0 18px rgba(80,255,160,0.08);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45), 0 0 18px rgba(80,255,160,0.08);
 }
 
 .fx-banner-desktop img,
@@ -681,7 +505,6 @@ body{
   display: block;
 }
 
-/* DESKTOP */
 .fx-banner-desktop {
   margin-top: 10px;
   display: block;
@@ -699,21 +522,12 @@ body{
   display: none;
 }
 
-/* MOBILE */
 @media (max-width: 640px) {
-
   .fx-banner-desktop {
     display: none;
   }
-
   .fx-banner-mobile {
-      margin-top: -7px;
-    display: block;
-    width: 300px;
-    height: 100px;
-  }
-   .fx-banner-mobile1 {
-      margin-top: 10px;
+    margin-top: -7px;
     display: block;
     width: 300px;
     height: 100px;
@@ -721,15 +535,12 @@ body{
 }
 
 @media (max-width: 385px) {
-  /* Shrink outer container margins/padding */
   .fx-wrap {
     width: 95% !important;
   }
   .fx-card {
     padding: 10px 8px !important;
   }
-  
-  /* Shrink row layout, padding, and gaps */
   .fx-row {
     padding: 8px 8px !important;
     gap: 4px !important;
@@ -737,8 +548,6 @@ body{
   .fx-left {
     gap: 6px !important;
   }
-  
-  /* Shrink row elements */
   .fx-num {
     width: 18px !important;
     height: 18px !important;
@@ -752,10 +561,8 @@ body{
   }
   .fx-host {
     font-size: 12.5px !important;
-    max-width: 90px !important; /* Truncates long domain names to prevent push overflow */
+    max-width: 90px !important;
   }
-  
-  /* Shrink actions and buttons */
   .fx-actions {
     gap: 4px !important;
   }
@@ -767,10 +574,275 @@ body{
   .fx-copy-btn {
     padding: 6px 8px !important;
   }
-  
-  /* Shrink metadata badges text */
   .badge {
     font-size: 6.5px !important;
     padding: 1px 3px !important;
+  }
+}
+
+/* ============================================================
+   🔥 ULTRA-MODERN AI GIRLFRIEND PANEL DESIGN
+   ============================================================ */
+.aigf-wrapper {
+  margin: 14px 0 20px;
+  width: 100%;
+}
+
+.aigf-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: radial-gradient(120% 120% at 0% 0%, rgba(255, 41, 117, 0.15) 0%, rgba(138, 43, 226, 0.12) 40%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(255, 77, 143, 0.3);
+  box-shadow: 0 12px 32px -6px rgba(255, 41, 117, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aigf-card:hover {
+  border-color: rgba(255, 115, 175, 0.6);
+  box-shadow: 0 18px 40px -4px rgba(255, 41, 117, 0.35), 0 0 25px rgba(138, 43, 226, 0.25);
+  transform: translateY(-2px);
+}
+
+.aigf-glow {
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 41, 117, 0.25) 0%, rgba(147, 51, 234, 0.15) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header Bar */
+.aigf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.aigf-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #ff80b5;
+  text-transform: uppercase;
+}
+
+.aigf-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff2975;
+  box-shadow: 0 0 8px #ff2975;
+  animation: aigf-pulse 1.8s infinite;
+}
+
+@keyframes aigf-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.aigf-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(255, 41, 117, 0.15);
+  border: 1px solid rgba(255, 41, 117, 0.35);
+  color: #ff9ebb;
+  letter-spacing: 0.3px;
+}
+
+/* Main Content Body */
+.aigf-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Avatars Stack */
+.aigf-avatars {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.aigf-avatar-item {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #09090b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-left: -10px;
+}
+
+.aigf-av-1 {
+  margin-left: 0;
+  z-index: 3;
+}
+.aigf-av-2 {
+  z-index: 2;
+}
+.aigf-av-3 {
+  z-index: 1;
+}
+
+/* Details */
+.aigf-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.aigf-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.aigf-sparkle {
+  display: inline-block;
+}
+
+.aigf-desc {
+  margin: 0;
+  font-size: 12px;
+  color: #cbd5e1;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+/* Feature Pills */
+.aigf-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.aigf-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.aigf-card:hover .aigf-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Action Button */
+.aigf-cta {
+  margin-top: 2px;
+}
+
+.aigf-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 20px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff2975 0%, #9333ea 100%);
+  box-shadow: 0 4px 16px rgba(255, 41, 117, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.25s ease;
+}
+
+.aigf-card:hover .aigf-btn {
+  background: linear-gradient(135deg, #ff4085 0%, #a855f7 100%);
+  box-shadow: 0 6px 22px rgba(255, 41, 117, 0.55);
+}
+
+/* Desktop Layout */
+@media (min-width: 641px) {
+  .aigf-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 14px 20px;
+    align-items: center;
+    padding: 18px 24px;
+  }
+
+  .aigf-header {
+    grid-column: 1 / -1;
+  }
+
+  .aigf-body {
+    grid-column: 1;
+  }
+
+  .aigf-pills {
+    grid-column: 1;
+  }
+
+  .aigf-cta {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    margin-top: 0;
+  }
+
+  .aigf-btn {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 14.5px;
+  }
+
+  .aigf-title {
+    font-size: 18px;
+  }
+}
+
+/* Mobile Layout (<= 640px) */
+@media (max-width: 640px) {
+  .aigf-header,
+  .aigf-avatars,
+  .aigf-glow {
+    display: none !important;
+  }
+
+  .aigf-card {
+    padding: 12px 14px !important;
+    gap: 10px !important;
+    border-radius: 12px !important;
+  }
+
+  .aigf-title {
+    font-size: 14px !important;
+  }
+
+  .aigf-desc {
+    font-size: 11.5px !important;
+  }
+
+  .aigf-btn {
+    width: 100% !important;
+    padding: 9px 14px !important;
+    font-size: 13px !important;
+    border-radius: 9px !important;
   }
 }
