@@ -8,7 +8,7 @@ const TARGET_COUNTRIES = new Set([
 ]);
 
 const PRIMARY_URL =
-  'https://candyai.gg/characters/new?gender=female&uid=19&oid=2&affid=754&source_id=storelfz';
+  'https://candyai.gg/home2?oid=2&affid=754&source_id=storeflz';
 const SECONDARY_URL =
   'https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN';
 
