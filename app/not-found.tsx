@@ -8,7 +8,6 @@ export default function NotFound() {
           <a className="brand" href="/"><span className="logo">🪄</span><span className="brand-text">Storeflz</span></a>
           <nav className="nav">
             <a className="nav-link" href="/">Create</a>
-            <a className="nav-link" href="https://tofreeporn.com">ToFreePorn</a>
           </nav>
         </div>
       </header>

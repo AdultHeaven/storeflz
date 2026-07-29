@@ -171,7 +171,6 @@ export default async function FileViewPage({ params }: { params: { id: string } 
           <a className="fx-brand" href="/"><span className="fx-logo">🪄</span><span>Storeflz</span></a>
           <nav className="fx-nav">
             <a className="fx-nav-link" href="/">Create</a>
-            <a className="fx-nav-link" href="https://tofreeporn.com">ToFreePorn</a>
           </nav>
         </div>
       </header>
