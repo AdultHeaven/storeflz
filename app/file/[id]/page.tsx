@@ -73,7 +73,7 @@ export async function generateMetadata(
       description,
       images: [ogImage],
     },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: false },
     themeColor: "#0b0e14",
     icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
     keywords: [

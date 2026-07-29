@@ -7,6 +7,7 @@ import "./globals.css";
 export const metadata = {
   title: "Create Shareable Link Pages",
   description: "Create a shareable page to organize useful links in one place.",
+  robots: { index: true, follow: true },
 };
 //https://t.vlmai-1.com/384478/9022/39455?aff_sub5=SF_006OG000004lmDN
 

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://storeflz.com/report"
   },
+  robots: { index: false, follow: false },
   themeColor: "#09090b"
 };
 
