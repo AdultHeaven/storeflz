@@ -112,33 +112,36 @@ body {
 }
 
 .fx-head {
-  margin-bottom: 20px;
-  padding-bottom: 16px;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .fx-status-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 11px;
+  gap: 4px;
+  font-size: 9.5px !important;
   font-weight: 700;
   color: #34d399;
-  background: rgba(52, 211, 153, 0.1);
-  border: 1px solid rgba(52, 211, 153, 0.22);
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  letter-spacing: 0.4px;
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  padding: 2px 8px !important;
+  border-radius: 12px;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
 }
 
 .fx-green-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px !important;
+  height: 5px !important;
   border-radius: 50%;
   background: #34d399;
-  box-shadow: 0 0 8px rgba(52, 211, 153, 0.7);
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
 }
 
 .fx-title {
@@ -247,21 +250,26 @@ body {
 
 /* actions */
 .fx-actions {
-  display: flex;
-  gap: 8px
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.fx-actions .fx-primary {
+  margin-right: 6px !important;
 }
 
 .fx-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  padding: 6px 12px !important;
-  border-radius: 6px !important;
+  gap: 6px;
+  padding: 9px 20px !important;
+  border-radius: 8px !important;
   border: 1px solid transparent;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 12.5px !important;
+  font-weight: 800;
+  font-size: 14px !important;
   line-height: 1;
   text-decoration: none;
 }
@@ -270,8 +278,10 @@ body {
   background: #ffffff !important;
   border: none !important;
   color: #09090b !important;
-  font-weight: 700 !important;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.12);
+  font-weight: 800 !important;
+  padding: 9px 22px !important;
+  font-size: 14px !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.15);
   transition: all 0.2s ease !important;
 }
 
@@ -399,7 +409,7 @@ body {
   }
 
   .fx-main {
-    margin-top: 18px
+    margin-top: 10px !important;
   }
 
   .fx-card {
@@ -417,7 +427,24 @@ body {
   }
 
   .fx-actions {
-    justify-content: flex-end
+    justify-content: flex-end;
+    gap: 8px !important;
+  }
+
+  .fx-copy-btn {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    padding: 0 !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .fx-copy-btn svg {
+    width: 13px !important;
+    height: 13px !important;
   }
 
   .fx-url {
@@ -443,7 +470,10 @@ body {
 
   /* Header mobile optimization */
   .fx-header .fx-wrap {
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 0px;
   }
 
   .fx-brand {
@@ -524,7 +554,7 @@ body {
 
 @media (max-width:640px) {
   .fx-main {
-    margin-top: 18px
+    margin-top: 10px !important;
   }
 
   .fx-card {
@@ -543,9 +573,26 @@ body {
   }
 
   /* Show only icon on mobile for the copy button */
+  .fx-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+  }
+
+  .fx-actions .fx-primary {
+    margin-right: 8px !important;
+  }
+
   .fx-copy-btn {
-    padding: 8px 10px !important;
-    gap: 0 !important;
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    padding: 0 !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .fx-copy-btn .fx-copy-text,
@@ -553,19 +600,9 @@ body {
     display: none !important;
   }
 
-  .fx-copy-btn {
-    padding: 8px 10px !important;
-    min-width: 36px !important;
-    justify-content: center !important;
-  }
-
   .fx-copy-btn svg {
-    width: 14px;
-    height: 14px;
-  }
-
-  .fx-actions {
-    justify-content: flex-end
+    width: 12px !important;
+    height: 12px !important;
   }
 
   .fx-url {
