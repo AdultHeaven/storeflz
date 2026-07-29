@@ -27,7 +27,8 @@ body {
   flex-direction: column;
 }
 
-.fx-wrap, .container {
+.fx-wrap,
+.container {
   width: min(860px, 92%) !important;
   margin: 0 auto !important;
 }
@@ -77,21 +78,26 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #a1a1aa;
+  color: #09090b;
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 8px;
-  font-weight: 600;
-  font-size: 13.5px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: -0.2px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 12px rgba(255, 255, 255, 0.06);
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-.nav-link:hover, .nav-link.active {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
+.nav-link:hover,
+.nav-link.active {
+  color: #09090b;
+  background: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 /* main card */
@@ -501,9 +507,10 @@ body {
     gap: 6px;
   }
 
-  .fx-nav-link {
-    padding: 6px 10px;
-    font-size: 12.5px;
+  .nav-link {
+    padding: 4px 12px !important;
+    font-size: 11.5px !important;
+    border-radius: 6px !important;
   }
 
   /* Reorder banner below links on mobile */
