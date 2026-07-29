@@ -49,10 +49,10 @@ export default function ReportClient() {
               <p className="muted" style={{ fontSize: "14px", lineHeight: "1.5" }}>
                 Thank you for reporting. Our safety team reviews abuse complaints within 24–48 hours and will take action on non-compliant link folders.
               </p>
-              <button 
-                type="button" 
-                className="btn btn-secondary" 
-                style={{ marginTop: "20px" }} 
+              <button
+                type="button"
+                className="btn btn-secondary"
+                style={{ marginTop: "20px" }}
                 onClick={() => {
                   setSubmitted(false);
                   setName("");
@@ -69,50 +69,50 @@ export default function ReportClient() {
             <form className="form" onSubmit={handleSubmit}>
               <div className="field">
                 <label className="label" htmlFor="report-name">Your Name</label>
-                <input 
-                  id="report-name" 
-                  className="input" 
-                  type="text" 
-                  value={name} 
-                  onChange={(e) => setName(e.target.value)} 
-                  placeholder="John Doe" 
-                  required 
+                <input
+                  id="report-name"
+                  className="input"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="John Doe"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label className="label" htmlFor="report-email">Your Email Address</label>
-                <input 
-                  id="report-email" 
-                  className="input" 
-                  type="email" 
-                  value={email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  placeholder="contact@domain.com" 
-                  required 
+                <input
+                  id="report-email"
+                  className="input"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="contact@domain.com"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label className="label" htmlFor="report-url">Storeflz File/Folder Link URL</label>
-                <input 
-                  id="report-url" 
-                  className="input" 
-                  type="url" 
-                  value={fileUrl} 
-                  onChange={(e) => setFileUrl(e.target.value)} 
-                  placeholder="https://storeflz.com/file/..." 
-                  required 
+                <input
+                  id="report-url"
+                  className="input"
+                  type="url"
+                  value={fileUrl}
+                  onChange={(e) => setFileUrl(e.target.value)}
+                  placeholder="https://storeflz.com/file/..."
+                  required
                 />
               </div>
 
               <div className="field">
                 <label className="label" htmlFor="report-reason">Reason for Report</label>
-                <select 
-                  id="report-reason" 
-                  className="input" 
-                  value={reason} 
-                  onChange={(e) => setReason(e.target.value)} 
+                <select
+                  id="report-reason"
+                  className="input"
+                  value={reason}
+                  onChange={(e) => setReason(e.target.value)}
                   style={{ background: "#0f1320", color: "var(--text)" }}
                   required
                 >
@@ -127,22 +127,22 @@ export default function ReportClient() {
 
               <div className="field">
                 <label className="label" htmlFor="report-details">Additional Details & Evidence</label>
-                <textarea 
-                  id="report-details" 
-                  className="input" 
-                  value={details} 
-                  onChange={(e) => setDetails(e.target.value)} 
-                  placeholder="Please provide copyright proof or detailed description of harmful links..." 
-                  rows={5} 
+                <textarea
+                  id="report-details"
+                  className="input"
+                  value={details}
+                  onChange={(e) => setDetails(e.target.value)}
+                  placeholder="Please provide copyright proof or detailed description of harmful links..."
+                  rows={5}
                   style={{ resize: "vertical", fontFamily: "inherit" }}
-                  required 
+                  required
                 />
               </div>
 
               <div className="actions" style={{ marginTop: "10px" }}>
-                <button 
-                  type="submit" 
-                  className={`btn btn-primary ${loading ? "loading" : ""}`} 
+                <button
+                  type="submit"
+                  className={`btn btn-primary ${loading ? "loading" : ""}`}
                   disabled={loading}
                   style={{ width: "100%" }}
                 >

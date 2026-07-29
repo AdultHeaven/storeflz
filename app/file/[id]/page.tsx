@@ -157,18 +157,18 @@ export default async function FileViewPage({ params }: { params: { id: string } 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-    {/* <AffiliatePop /> */}
-{/* <CandyVideoOverlay /> */}
-{/* <StripchatOverlay /> */}
-         <Script
-  src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
-  strategy="afterInteractive"
-/>  
+      {/* <AffiliatePop /> */}
+      {/* <CandyVideoOverlay /> */}
+      {/* <StripchatOverlay /> */}
+      <Script
+        src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
+        strategy="afterInteractive"
+      />
 
 
       <header className="fx-header">
         <div className="fx-wrap">
-          <a className="fx-brand" href="/"><span className="fx-logo">🪄</span><span>Storeflz</span></a>
+          <a className="fx-brand" href="/"><span>Storeflz</span></a>
           <nav className="fx-nav">
             <a className="fx-nav-link" href="/">Create</a>
           </nav>
@@ -178,15 +178,20 @@ export default async function FileViewPage({ params }: { params: { id: string } 
       <main className="fx-wrap fx-main">
         <section className="fx-card fx-glass">
           <div className="fx-head">
+            <div className="fx-status-badge">
+              <span className="fx-green-dot"></span>
+              <span>Active Mirror Directory</span>
+            </div>
             <h1 className="fx-title">{data.title || data.id}</h1>
-            {/* <p className="fx-muted">
-              Choose any mirror. If one fails, try another.
-{data.created_at ? <> Created on {new Date(data.created_at).toLocaleDateString()}</> : null}
-            </p> */}
-            <p className="fx-muted">
-              Select a link below to continue.
-              {formattedDate ? <> Added on {formattedDate}</> : null}
-            </p>
+            <div className="fx-sub-info">
+              <span>Select a mirror link below to continue</span>
+              {formattedDate && (
+                <>
+                  <span className="fx-dot-divider">•</span>
+                  <span>Added {formattedDate}</span>
+                </>
+              )}
+            </div>
           </div>
 
           <MirrorList mirrors={data.mirrors || []} pageUrl={pageUrl} />
@@ -232,7 +237,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
               </div>
             </div>
           )}
-{/* <a
+          {/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
   rel="nofollow noopener noreferrer"
@@ -247,9 +252,9 @@ export default async function FileViewPage({ params }: { params: { id: string } 
     </p>
   </div>
 </a> */}
-{/* <HilltopAd /> */}
+          {/* <HilltopAd /> */}
 
-{/* <AdBanner/> */}
+          {/* <AdBanner/> */}
 
           {/* FAQ Section */}
           <div className="fx-faq-section" style={{ marginTop: "32px", padding: "20px 8px 8px", borderTop: "1px solid var(--stroke)" }}>
@@ -281,7 +286,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
       </main>
 
-       {/* <div className="fx-banner-wrap">
+      {/* <div className="fx-banner-wrap">
 
   <a
     href="/api/go/jerkmate?plc=strPcBig"
@@ -314,7 +319,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 </div>   */}
       {/* <AdCenter/> */}
 
-{/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
+      {/* <div id="container-6736fe12ee184733bf2b50f38e703b00" />
 
 <Script
   src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
@@ -324,8 +329,8 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 /> */}
       <footer className="fx-footer">
         <div className="fx-wrap">
-          <span>© {new Date().getFullYear()} Storeflz</span>
-          <span className="fx-muted">Fast, Shareable Link Pages</span>
+          <span>© {new Date().getFullYear()} Storeflz. All rights reserved.</span>
+          <span className="fx-muted">Fast & Safe Shareable Link Pages</span>
         </div>
       </footer>
     </>
