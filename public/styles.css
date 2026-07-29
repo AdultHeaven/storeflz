@@ -636,4 +636,26 @@ main {
   .feature-box {
     padding: 16px;
   }
+  .footer-wrap {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 6px !important;
+  }
+}
+
+/* Footer */
+.site-footer {
+  margin-top: auto;
+  padding: 0;
+  background: #09090b;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  font-size: 13px;
+  color: #71717a;
 }

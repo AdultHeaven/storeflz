@@ -166,11 +166,13 @@ export default async function FileViewPage({ params }: { params: { id: string } 
       />
 
 
-      <header className="fx-header">
-        <div className="fx-wrap">
-          <a className="fx-brand" href="/"><span>Storeflz</span></a>
-          <nav className="fx-nav">
-            <a className="fx-nav-link" href="/">Create</a>
+      <header className="site-header">
+        <div className="container header-wrap">
+          <a className="brand" href="/">
+            <span className="brand-text">Storeflz</span>
+          </a>
+          <nav className="nav">
+            <a className="nav-link active" href="/">Create</a>
           </nav>
         </div>
       </header>
