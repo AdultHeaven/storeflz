@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { SmartLink } from './SmartLink';
 
 const TARGET_COUNTRIES = new Set([
   'AU', 'AT', 'BE', 'CA', 'DK', 'FI', 'FR', 'DE', 'IE', 'IT',
@@ -60,7 +61,7 @@ export default function CreateAiGirlfriendPanel() {
 
   return (
     <div className="aigf-wrapper">
-      <a
+      <SmartLink
         href={affLink}
         target="_blank"
         rel="nofollow noopener noreferrer"
@@ -149,7 +150,7 @@ export default function CreateAiGirlfriendPanel() {
             </svg>
           </div>
         </div>
-      </a>
+      </SmartLink>
     </div>
   );
 }

@@ -149,6 +149,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { SmartLink, openSmartLink } from './SmartLink';
 
 type Offer = 'candi' | 'ourdream';
 
@@ -238,18 +239,14 @@ const selectedVideoSrc =
         ? 'https://landing.candynetwork.ai/lp1?var_text=28&via=lxrukg'
         : 'https://t.vlmai-1.com/384478/10139/0?aff_sub5=SF_006OG000004lmDN';
 
-    window.open(
-      target,
-      '_blank',
-      'noopener,noreferrer'
+    openSmartLink(target, '_blank');
+
+    localStorage.setItem(
+      'video-overlay-dismissed',
+      Date.now().toString()
     );
 
-      localStorage.setItem(
-    'video-overlay-dismissed',
-    Date.now().toString()
-  );
-
-  setVisible(false);
+    setVisible(false);
   };
 
   if (!visible || !videoSrc) return null;
@@ -265,7 +262,7 @@ const selectedVideoSrc =
       ✕
     </button>
 
-    <a
+    <SmartLink
       href="https://landing.candynetwork.ai/lp1?var_text=28&via=lxrukg"
       target="_blank"
       rel="noopener noreferrer"
@@ -297,7 +294,7 @@ const selectedVideoSrc =
           type="video/mp4"
         />
       </video>
-    </a>
+    </SmartLink>
   </div>
 </div>
   );

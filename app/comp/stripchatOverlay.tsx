@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { SmartLink } from "./SmartLink";
 
 export default function StripchatOverlay() {
   const [visible, setVisible] = useState(false);
@@ -96,7 +97,7 @@ const fiveMinutes = 5 * 60 * 1000;
       ✕
     </button>
 
-    <a
+    <SmartLink
       href={offerLink}
       target="_blank"
       rel="noopener noreferrer"
@@ -127,7 +128,7 @@ const fiveMinutes = 5 * 60 * 1000;
           type="video/mp4"
         />
       </video>
-    </a>
+    </SmartLink>
   </div>
 </div>
   );

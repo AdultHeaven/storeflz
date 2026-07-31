@@ -1,5 +1,7 @@
 "use client";
 
+import { SmartLink } from "./comp/SmartLink";
+
 import { useEffect, useState } from "react";
 
 const API_BASE =
@@ -245,9 +247,9 @@ export default function HomeClient() {
               >
                 {copied ? "Copied!" : "Copy Link"}
               </button>
-              <a className="nav-link" href={shareUrl} target="_blank" rel="noopener noreferrer">
+              <SmartLink className="nav-link" href={shareUrl} target="_blank" rel="noopener noreferrer">
                 Open →
-              </a>
+              </SmartLink>
             </div>
           </section>
         )}
