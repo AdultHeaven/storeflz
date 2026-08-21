@@ -1,68 +1,16 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { SmartLink } from './SmartLink';
 
-const TARGET_COUNTRIES = new Set([
-  'AU', 'AT', 'BE', 'CA', 'DK', 'FI', 'FR', 'DE', 'IE', 'IT',
-  'JP', 'LU', 'NL', 'NZ', 'NO', 'ES', 'SE', 'CH', 'GB', 'UK', 'US'
-]);
-
-const PRIMARY_URL =
-  'https://candyai.gg/home2?oid=2&affid=754&source_id=storeflz';
-const SECONDARY_URL =
+const CRACKREVENUE_URL =
   'https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN';
 
 export default function CreateAiGirlfriendPanel() {
-  const [affLink, setAffLink] = useState<string>(PRIMARY_URL);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    async function detectCountry() {
-      try {
-        const res = await fetch('/api/geo');
-        if (res.ok) {
-          const data = await res.json();
-          if (data.country && isMounted) {
-            if (TARGET_COUNTRIES.has(data.country)) {
-              setAffLink(PRIMARY_URL);
-            } else {
-              setAffLink(SECONDARY_URL);
-            }
-            return;
-          }
-        }
-
-        const traceRes = await fetch('https://www.cloudflare.com/cdn-cgi/trace');
-        if (traceRes.ok) {
-          const text = await traceRes.text();
-          const match = text.match(/loc=([A-Z]+)/);
-          if (match && match[1] && isMounted) {
-            const loc = match[1].toUpperCase();
-            if (TARGET_COUNTRIES.has(loc)) {
-              setAffLink(PRIMARY_URL);
-            } else {
-              setAffLink(SECONDARY_URL);
-            }
-          }
-        }
-      } catch (err) {
-        console.warn('Geo detection error:', err);
-      }
-    }
-
-    detectCountry();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
   return (
     <div className="aigf-wrapper">
       <SmartLink
-        href={affLink}
+        href={CRACKREVENUE_URL}
         target="_blank"
         rel="nofollow noopener noreferrer"
         className="aigf-card"
@@ -84,12 +32,12 @@ export default function CreateAiGirlfriendPanel() {
             <div className="aigf-avatar-item aigf-av-1">
               <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="18" cy="18" r="18" fill="url(#av1-grad)" />
-                <path d="M18 10C14.134 10 11 13.134 11 17C11 20.866 14.134 24 18 24C21.866 24 25 20.866 25 17C25 13.134 21.866 10 18 10Z" fill="#FFF0F5" opacity="0.9"/>
-                <path d="M18 13C16.343 13 15 14.343 15 16C15 17.657 16.343 19 18 19C19.657 19 21 17.657 21 16C21 14.343 19.657 13 18 13Z" fill="#FF2975"/>
+                <path d="M18 10C14.134 10 11 13.134 11 17C11 20.866 14.134 24 18 24C21.866 24 25 20.866 25 17C25 13.134 21.866 10 18 10Z" fill="#FFF0F5" opacity="0.9" />
+                <path d="M18 13C16.343 13 15 14.343 15 16C15 17.657 16.343 19 18 19C19.657 19 21 17.657 21 16C21 14.343 19.657 13 18 13Z" fill="#FF2975" />
                 <defs>
                   <linearGradient id="av1-grad" x1="0" y1="0" x2="36" y2="36">
-                    <stop stopColor="#FF2975"/>
-                    <stop offset="1" stopColor="#9333EA"/>
+                    <stop stopColor="#FF2975" />
+                    <stop offset="1" stopColor="#9333EA" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -97,12 +45,12 @@ export default function CreateAiGirlfriendPanel() {
             <div className="aigf-avatar-item aigf-av-2">
               <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="18" cy="18" r="18" fill="url(#av2-grad)" />
-                <path d="M18 10C14.134 10 11 13.134 11 17C11 20.866 14.134 24 18 24C21.866 24 25 20.866 25 17C25 13.134 21.866 10 18 10Z" fill="#F0F9FF" opacity="0.9"/>
-                <path d="M18 13C16.343 13 15 14.343 15 16C15 17.657 16.343 19 18 19C19.657 19 21 17.657 21 16C21 14.343 19.657 13 18 13Z" fill="#06B6D4"/>
+                <path d="M18 10C14.134 10 11 13.134 11 17C11 20.866 14.134 24 18 24C21.866 24 25 20.866 25 17C25 13.134 21.866 10 18 10Z" fill="#F0F9FF" opacity="0.9" />
+                <path d="M18 13C16.343 13 15 14.343 15 16C15 17.657 16.343 19 18 19C19.657 19 21 17.657 21 16C21 14.343 19.657 13 18 13Z" fill="#06B6D4" />
                 <defs>
                   <linearGradient id="av2-grad" x1="0" y1="0" x2="36" y2="36">
-                    <stop stopColor="#3B82F6"/>
-                    <stop offset="1" stopColor="#EC4899"/>
+                    <stop stopColor="#3B82F6" />
+                    <stop offset="1" stopColor="#EC4899" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -110,12 +58,12 @@ export default function CreateAiGirlfriendPanel() {
             <div className="aigf-avatar-item aigf-av-3">
               <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="18" cy="18" r="18" fill="url(#av3-grad)" />
-                <path d="M18 10C14.134 10 11 13.134 11 17C11 20.866 14.134 24 18 24C21.866 24 25 20.866 25 17C25 13.134 21.866 10 18 10Z" fill="#FAF5FF" opacity="0.9"/>
-                <path d="M18 13C16.343 13 15 14.343 15 16C15 17.657 16.343 19 18 19C19.657 19 21 17.657 21 16C21 14.343 19.657 13 18 13Z" fill="#8B5CF6"/>
+                <path d="M18 10C14.134 10 11 13.134 11 17C11 20.866 14.134 24 18 24C21.866 24 25 20.866 25 17C25 13.134 21.866 10 18 10Z" fill="#FAF5FF" opacity="0.9" />
+                <path d="M18 13C16.343 13 15 14.343 15 16C15 17.657 16.343 19 18 19C19.657 19 21 17.657 21 16C21 14.343 19.657 13 18 13Z" fill="#8B5CF6" />
                 <defs>
                   <linearGradient id="av3-grad" x1="0" y1="0" x2="36" y2="36">
-                    <stop stopColor="#8B5CF6"/>
-                    <stop offset="1" stopColor="#F43F5E"/>
+                    <stop stopColor="#8B5CF6" />
+                    <stop offset="1" stopColor="#F43F5E" />
                   </linearGradient>
                 </defs>
               </svg>

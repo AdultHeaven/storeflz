@@ -170,8 +170,8 @@ export default function CandyVideoOverlay() {
       }
     }
 
-    const selectedOffer: Offer ='candi';
-      // Math.random() < 0.5 ? 'candi' : 'ourdream';
+    const selectedOffer: Offer = 'candi';
+    // Math.random() < 0.5 ? 'candi' : 'ourdream';
 
     setOffer(selectedOffer);
 
@@ -181,14 +181,14 @@ export default function CandyVideoOverlay() {
     //     : 'https://ads.storeflz.com/ourdream-4-final-draft.mp4';
 
     const videoSources = [
-  // 'https://ads.storeflz.com/candy-ai-6.mp4',
-  'https://ads.storeflz.com/preroll_realistic_hook_2_cmai%20(top%20perf%F0%9F%94%A5).mp4',
-  'https://ads.storeflz.com/preroll_realistic_hook_4_cmai.mp4',
-  // add more here
-];
+      // 'https://ads.storeflz.com/candy-ai-6.mp4',
+      'https://ads.storeflz.com/preroll_realistic_hook_2_cmai%20(top%20perf%F0%9F%94%A5).mp4',
+      'https://ads.storeflz.com/preroll_realistic_hook_4_cmai.mp4',
+      // add more here
+    ];
 
-const selectedVideoSrc =
-  videoSources[Math.floor(Math.random() * videoSources.length)];
+    const selectedVideoSrc =
+      videoSources[Math.floor(Math.random() * videoSources.length)];
 
 
     setVideoSrc(selectedVideoSrc);
@@ -236,7 +236,7 @@ const selectedVideoSrc =
   const handleVideoClick = () => {
     const target =
       offer === 'candi'
-        ? 'https://landing.candynetwork.ai/lp1?var_text=28&via=lxrukg'
+        ? 'https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN'
         : 'https://t.vlmai-1.com/384478/10139/0?aff_sub5=SF_006OG000004lmDN';
 
     openSmartLink(target, '_blank');
@@ -252,50 +252,50 @@ const selectedVideoSrc =
   if (!visible || !videoSrc) return null;
 
   return (
- <div className="candy-overlay">
-  <div className="candy-modal">
-    <button
-      className="candy-close"
-      onClick={closeOverlay}
-      aria-label="Close"
-    >
-      ✕
-    </button>
+    <div className="candy-overlay">
+      <div className="candy-modal">
+        <button
+          className="candy-close"
+          onClick={closeOverlay}
+          aria-label="Close"
+        >
+          ✕
+        </button>
 
-    <SmartLink
-      href="https://landing.candynetwork.ai/lp1?var_text=28&via=lxrukg"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() => {
-        localStorage.setItem(
-          'video-overlay-dismissed',
-          Date.now().toString()
-        );
-        setVisible(false);
-      }}
-    >
-      <video
-        key={videoSrc}
-        className="candy-video"
-        autoPlay
-        muted
-        playsInline
-        loop
-        preload="auto"
-        onLoadedData={() => setVideoReady(true)}
-        style={{
-          opacity: videoReady ? 1 : 0,
-          transition: 'opacity 0.15s ease',
-          cursor: 'pointer'
-        }}
-      >
-        <source
-          src={videoSrc}
-          type="video/mp4"
-        />
-      </video>
-    </SmartLink>
-  </div>
-</div>
+        <SmartLink
+          href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            localStorage.setItem(
+              'video-overlay-dismissed',
+              Date.now().toString()
+            );
+            setVisible(false);
+          }}
+        >
+          <video
+            key={videoSrc}
+            className="candy-video"
+            autoPlay
+            muted
+            playsInline
+            loop
+            preload="auto"
+            onLoadedData={() => setVideoReady(true)}
+            style={{
+              opacity: videoReady ? 1 : 0,
+              transition: 'opacity 0.15s ease',
+              cursor: 'pointer'
+            }}
+          >
+            <source
+              src={videoSrc}
+              type="video/mp4"
+            />
+          </video>
+        </SmartLink>
+      </div>
+    </div>
   );
 }
