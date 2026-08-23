@@ -6,7 +6,7 @@ import AdBanner from "../../comp/AdBanner"; // adjust path
 import AdCenter from "../../comp/AdCenter";
 import SmartlinkTrigger from "../../comp/SmartlinkTrigger";
 import TrafficStarsPush from '../../comp/TrafficStarsPush';
-// import AffiliatePop from '../../comp/AffiliatePop';
+import AffiliatePop from '../../comp/AffiliatePop';
 import CandyVideoOverlay from '../../comp/CandyVideoOverlay';
 import StripchatOverlay from '../../comp/stripchatOverlay';
 import CreateAiGirlfriendPanel from '../../comp/CreateAiGirlfriendPanel';
@@ -162,10 +162,10 @@ export default async function FileViewPage({ params }: { params: { id: string } 
       {/* <AffiliatePop /> */}
       {/* <CandyVideoOverlay /> */}
       {/* <StripchatOverlay /> */}
-      {/* <Script
+      <Script
         src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
         strategy="afterInteractive"
-      /> */}
+      />
 
 
       <header className="site-header">
@@ -232,64 +232,6 @@ export default async function FileViewPage({ params }: { params: { id: string } 
             </div>
           )}
 
-          {/* Bottom Ad Section (Banner & Native Ad) */}
-          <div className="fx-ad-section">
-            <div
-              id="ad-container-300x250"
-              style={{
-                margin: "20px 0",
-                textAlign: "center",
-                minHeight: "250px",
-              }}
-            >
-              <Script
-                id="high-performance-ad"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `
-          atOptions = {
-            'key' : 'de969ad072620e41fdeb02d6cf68cc07',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-          (function() {
-            var container = document.getElementById('ad-container-300x250');
-
-            if (container && !container.dataset.loaded) {
-              container.dataset.loaded = 'true';
-
-              var script = document.createElement('script');
-              script.type = 'text/javascript';
-              script.src = "https://roomsmergeshipwreck.com/de969ad072620e41fdeb02d6cf68cc07/invoke.js";
-
-              container.appendChild(script);
-            }
-          })();
-        `,
-                }}
-              />
-            </div>
-
-            <div
-              id="native-ad-container"
-              style={{
-                margin: "20px 0",
-                width: "100%",
-              }}
-            >
-              <div id="container-6736fe12ee184733bf2b50f38e703b00" />
-
-              <Script
-                id="native-ad-script"
-                src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
-                strategy="afterInteractive"
-                async
-                data-cfasync="false"
-              />
-            </div>
-          </div>
           {/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
@@ -309,7 +251,37 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
           {/* <AdBanner/> */}
 
+          {/* <div id="ad-container" style={{ margin: "20px 0", textAlign: "center" }} />
 
+          <Script
+            id="high-performance-ad"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+      atOptions = {
+        'key' : 'de969ad072620e41fdeb02d6cf68cc07',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+      (function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "https://roomsmergeshipwreck.com/de969ad072620e41fdeb02d6cf68cc07/invoke.js";
+        document.getElementById('ad-container').appendChild(script);
+      })();
+    `,
+            }}
+          />
+          <div id="container-6736fe12ee184733bf2b50f38e703b00" />
+
+          <Script
+            src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
+            strategy="afterInteractive"
+            async
+            data-cfasync="false"
+          /> */}
 
         </section>
 

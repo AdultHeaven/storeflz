@@ -123,7 +123,7 @@ export default function MirrorList({
               key={i}
               className="fx-row"
               onClick={(e) => {
-                if ((e.target as HTMLElement).closest(".fx-copy-btn")) return;
+                if ((e.target as HTMLElement).closest(".fx-copy-btn") || (e.target as HTMLElement).closest(".fx-btn")) return;
                 openSmartLink(url, "_blank");
               }}
               style={{ cursor: "pointer" }}
@@ -163,6 +163,9 @@ export default function MirrorList({
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
                 >
                   Open
                 </SmartLink>
