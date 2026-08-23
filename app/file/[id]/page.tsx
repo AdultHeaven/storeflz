@@ -205,39 +205,61 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
           {/* Banner Ad below Candy (PC 728x90 / Mobile 300x250) */}
           {/* <CandyAdBanner /> */}
-          <div id="ad-container" style={{ margin: "20px 0", textAlign: "center" }} />
-
-          <Script
-            id="high-performance-ad"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-      atOptions = {
-        'key' : 'de969ad072620e41fdeb02d6cf68cc07',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-      (function() {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = "https://roomsmergeshipwreck.com/de969ad072620e41fdeb02d6cf68cc07/invoke.js";
-        document.getElementById('ad-container').appendChild(script);
-      })();
-    `,
+          <div
+            id="ad-container-300x250"
+            style={{
+              margin: "20px 0",
+              textAlign: "center",
+              minHeight: "250px",
             }}
-          />
-          {/* 4:1 Native Ad Banner (responsive vertical stack on mobile) */}
-          {/* <NativeAdBanner /> */}
-          <div id="container-6736fe12ee184733bf2b50f38e703b00" />
+          >
+            <Script
+              id="high-performance-ad"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+        atOptions = {
+          'key' : 'de969ad072620e41fdeb02d6cf68cc07',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+        (function() {
+          var container = document.getElementById('ad-container-300x250');
 
-          <Script
-            src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
-            strategy="afterInteractive"
-            async
-            data-cfasync="false"
-          />
+          if (container && !container.dataset.loaded) {
+            container.dataset.loaded = 'true';
+
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "https://roomsmergeshipwreck.com/de969ad072620e41fdeb02d6cf68cc07/invoke.js";
+
+            container.appendChild(script);
+          }
+        })();
+      `,
+              }}
+            />
+          </div>
+
+          <div
+            id="native-ad-container"
+            style={{
+              margin: "20px 0",
+              width: "100%",
+            }}
+          >
+            <div id="container-6736fe12ee184733bf2b50f38e703b00" />
+
+            <Script
+              id="native-ad-script"
+              src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
+              strategy="afterInteractive"
+              async
+              data-cfasync="false"
+            />
+          </div>
 
           {/* Contextual Download Tips (moved below links) */}
           {(hasGofile || hasPixeldrain || hasMega) && (
