@@ -1324,3 +1324,55 @@ body {
     border-radius: 9px !important;
   }
 }
+
+/* Candy Ad Banner & Native Ad Styles */
+.candy-ad-banner-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.native-ad-banner-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.native-ad-container {
+  width: 100%;
+  max-width: 728px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.native-ad-container iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  border: none !important;
+}
+
+@media (max-width: 768px) {
+  .candy-ad-banner-wrap {
+    margin: 15px 0 !important;
+    order: 4 !important;
+  }
+
+  .native-ad-banner-wrap {
+    margin: 15px 0 !important;
+    order: 5 !important;
+  }
+
+  .native-ad-container {
+    min-height: 800px !important;
+    height: auto !important;
+  }
+
+  .native-ad-container iframe {
+    min-height: 800px !important;
+  }
+}

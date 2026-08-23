@@ -10,6 +10,8 @@ import TrafficStarsPush from '../../comp/TrafficStarsPush';
 import CandyVideoOverlay from '../../comp/CandyVideoOverlay';
 import StripchatOverlay from '../../comp/stripchatOverlay';
 import CreateAiGirlfriendPanel from '../../comp/CreateAiGirlfriendPanel';
+import CandyAdBanner from '../../comp/CandyAdBanner';
+import NativeAdBanner from '../../comp/NativeAdBanner';
 import { notFound } from "next/navigation";
 import '../CandyVideoOverlay.css';
 
@@ -160,10 +162,10 @@ export default async function FileViewPage({ params }: { params: { id: string } 
       {/* <AffiliatePop /> */}
       {/* <CandyVideoOverlay /> */}
       {/* <StripchatOverlay /> */}
-      <Script
+      {/* <Script
         src="https://roomsmergeshipwreck.com/04/8e/75/048e75c6e0e7d900065b329592f7715f.js"
         strategy="afterInteractive"
-      />
+      /> */}
 
 
       <header className="site-header">
@@ -201,15 +203,12 @@ export default async function FileViewPage({ params }: { params: { id: string } 
           {/* Create AI Girlfriend Panel */}
           <CreateAiGirlfriendPanel />
 
-          {/* Dynamic Copywriting to avoid thin content (moved below links) */}
-          <div className="fx-seo-desc" style={{ marginTop: "24px", padding: "20px 8px 0", fontSize: "14px", lineHeight: "1.6", borderTop: "1px solid var(--stroke)" }}>
-            <p style={{ margin: "0 0 10px", color: "var(--muted)", opacity: 0.9 }}>
-              Looking for safe and fast download mirrors for <strong>{data.title || data.id}</strong>? Above is a verified directory of mirror server links hosting this file. Mirroring files ensures that if one server becomes congested or goes offline, you can download the contents from another host.
-            </p>
-            <p style={{ margin: "0", color: "var(--muted)", fontSize: "13px", opacity: 0.7 }}>
-              We regularly check the availability of link destinations. Free download options are supported across all active platforms listed above.
-            </p>
-          </div>
+          {/* Banner Ad below Candy (PC 728x90 / Mobile 300x250) */}
+          <CandyAdBanner />
+
+          {/* 4:1 Native Ad Banner (responsive vertical stack on mobile) */}
+          <NativeAdBanner />
+
 
           {/* Contextual Download Tips (moved below links) */}
           {(hasGofile || hasPixeldrain || hasMega) && (
@@ -258,30 +257,6 @@ export default async function FileViewPage({ params }: { params: { id: string } 
 
           {/* <AdBanner/> */}
 
-          {/* FAQ Section */}
-          <div className="fx-faq-section" style={{ marginTop: "32px", padding: "20px 8px 8px", borderTop: "1px solid var(--stroke)" }}>
-            <h2 style={{ fontSize: "16px", fontWeight: "700", marginBottom: "16px", color: "var(--muted)" }}>Download Frequently Asked Questions</h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              <div>
-                <h3 style={{ fontSize: "13.5px", fontWeight: "600", color: "var(--muted)", opacity: 0.9, marginBottom: "4px" }}>Why are there multiple links for the same file?</h3>
-                <p style={{ fontSize: "12.5px", color: "var(--muted)", opacity: 0.7, margin: "0", lineHeight: "1.5" }}>
-                  Files shared online are often deleted due to server inactivity, bandwidth limit cap, or hosting timeouts. Providing multiple mirrors ensures you always have an active download link as a backup.
-                </p>
-              </div>
-              <div>
-                <h3 style={{ fontSize: "13.5px", fontWeight: "600", color: "var(--muted)", opacity: 0.9, marginBottom: "4px" }}>Which mirror should I use?</h3>
-                <p style={{ fontSize: "12.5px", color: "var(--muted)", opacity: 0.7, margin: "0", lineHeight: "1.5" }}>
-                  We recommend starting with GoFile or Pixeldrain mirrors if they are listed as "Low Ads" or "High Availability". They generally offer the fastest direct browser downloads.
-                </p>
-              </div>
-              <div>
-                <h3 style={{ fontSize: "13.5px", fontWeight: "600", color: "var(--muted)", opacity: 0.9, marginBottom: "4px" }}>Is it safe to download files from these hosts?</h3>
-                <p style={{ fontSize: "12.5px", color: "var(--muted)", opacity: 0.7, margin: "0", lineHeight: "1.5" }}>
-                  While the host platforms themselves are safe, always ensure you have a running antivirus software and do not run executable (.exe) files from untrusted sources.
-                </p>
-              </div>
-            </div>
-          </div>
 
 
         </section>
