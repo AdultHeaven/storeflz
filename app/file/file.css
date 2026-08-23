@@ -548,6 +548,11 @@ body {
   .fx-faq-section {
     order: 7 !important;
   }
+
+  .fx-ad-section {
+    order: 8 !important;
+    margin-top: 15px !important;
+  }
 }
 
 /* copy button states & icons */

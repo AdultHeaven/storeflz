@@ -203,64 +203,6 @@ export default async function FileViewPage({ params }: { params: { id: string } 
           {/* Create AI Girlfriend Panel */}
           <CreateAiGirlfriendPanel />
 
-          {/* Banner Ad below Candy (PC 728x90 / Mobile 300x250) */}
-          {/* <CandyAdBanner /> */}
-          <div
-            id="ad-container-300x250"
-            style={{
-              margin: "20px 0",
-              textAlign: "center",
-              minHeight: "250px",
-            }}
-          >
-            <Script
-              id="high-performance-ad"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-        atOptions = {
-          'key' : 'de969ad072620e41fdeb02d6cf68cc07',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-        (function() {
-          var container = document.getElementById('ad-container-300x250');
-
-          if (container && !container.dataset.loaded) {
-            container.dataset.loaded = 'true';
-
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = "https://roomsmergeshipwreck.com/de969ad072620e41fdeb02d6cf68cc07/invoke.js";
-
-            container.appendChild(script);
-          }
-        })();
-      `,
-              }}
-            />
-          </div>
-
-          <div
-            id="native-ad-container"
-            style={{
-              margin: "20px 0",
-              width: "100%",
-            }}
-          >
-            <div id="container-6736fe12ee184733bf2b50f38e703b00" />
-
-            <Script
-              id="native-ad-script"
-              src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
-              strategy="afterInteractive"
-              async
-              data-cfasync="false"
-            />
-          </div>
-
           {/* Contextual Download Tips (moved below links) */}
           {(hasGofile || hasPixeldrain || hasMega) && (
             <div className="fx-server-tips" style={{ margin: "18px 8px 10px", padding: "12px 14px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "10px" }}>
@@ -289,6 +231,65 @@ export default async function FileViewPage({ params }: { params: { id: string } 
               </div>
             </div>
           )}
+
+          {/* Bottom Ad Section (Banner & Native Ad) */}
+          <div className="fx-ad-section">
+            <div
+              id="ad-container-300x250"
+              style={{
+                margin: "20px 0",
+                textAlign: "center",
+                minHeight: "250px",
+              }}
+            >
+              <Script
+                id="high-performance-ad"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+          atOptions = {
+            'key' : 'de969ad072620e41fdeb02d6cf68cc07',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+          (function() {
+            var container = document.getElementById('ad-container-300x250');
+
+            if (container && !container.dataset.loaded) {
+              container.dataset.loaded = 'true';
+
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.src = "https://roomsmergeshipwreck.com/de969ad072620e41fdeb02d6cf68cc07/invoke.js";
+
+              container.appendChild(script);
+            }
+          })();
+        `,
+                }}
+              />
+            </div>
+
+            <div
+              id="native-ad-container"
+              style={{
+                margin: "20px 0",
+                width: "100%",
+              }}
+            >
+              <div id="container-6736fe12ee184733bf2b50f38e703b00" />
+
+              <Script
+                id="native-ad-script"
+                src="https://roomsmergeshipwreck.com/6736fe12ee184733bf2b50f38e703b00/invoke.js"
+                strategy="afterInteractive"
+                async
+                data-cfasync="false"
+              />
+            </div>
+          </div>
           {/* <a
   href="https://t.acrsmartcam.com/384478/3778/28133?bo=2779,2778,2777,2776,2775&po=6533&aff_sub5=SF_006OG000004lmDN"
   target="_blank"
