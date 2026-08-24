@@ -48,6 +48,7 @@ function detectHostName(url: string): string | null {
     if (hostname.includes("walkfiles")) return "Walkfiles";
     if (hostname.includes("fileditch")) return "Fileditch";
     if (hostname.includes("turbo")) return "Turbo";
+    if (hostname.includes("filester")) return "Filester";
     return hostname.replace(/^www\./, "");
   } catch {
     return null;
@@ -79,7 +80,10 @@ export default function HomeClient() {
 
       const invalidMirrors = mirrors.filter((url) => !isAllowedMirror(url));
       if (invalidMirrors.length > 0) {
-        throw new Error("Only mirrors with specified domains are allowed.");
+        const domainList = ALLOWED_DOMAINS.map(
+          (d) => d.charAt(0).toUpperCase() + d.slice(1)
+        ).join(", ");
+        throw new Error(`Only mirrors from the following domains are allowed: ${domainList}`);
       }
 
       let res: Response | null = null;
