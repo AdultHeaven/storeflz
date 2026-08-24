@@ -90,6 +90,8 @@ const mirrorMeta: Record<
   "small": { ads: "less", reliability: "high" },
   "bunkr": { ads: "high", reliability: "high" },
   "turbo": { ads: "high", reliability: "high" },
+  "walkfiles": { ads: "less", reliability: "high" },
+  "fileditch": { ads: "less", reliability: "medium" },
   "filester": { ads: "high", reliability: "high" },
 };
 

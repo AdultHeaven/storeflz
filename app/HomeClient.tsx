@@ -9,15 +9,44 @@ const API_BASE =
 const SITE_BASE =
   process.env.NEXT_PUBLIC_SITE_BASE ?? "https://storeflz.com";
 
+// List of allowed domains for mirror links (easily extensible)
+const ALLOWED_DOMAINS = [
+  "gofile",
+  "pixeldrain",
+  "bunkr",
+  "mega",
+  "walkfiles",
+  "fileditch",
+  "turbo",
+  "filester"
+];
+
+function isAllowedMirror(url: string): boolean {
+  if (!url.trim()) return false;
+  try {
+    const formattedUrl = /^https?:\/\//i.test(url.trim())
+      ? url.trim()
+      : `https://${url.trim()}`;
+    const hostname = new URL(formattedUrl).hostname.toLowerCase();
+    return ALLOWED_DOMAINS.some((domain) => hostname.includes(domain));
+  } catch {
+    return false;
+  }
+}
+
 function detectHostName(url: string): string | null {
   if (!url.trim()) return null;
   try {
-    const hostname = new URL(url).hostname.toLowerCase();
+    const formattedUrl = /^https?:\/\//i.test(url.trim())
+      ? url.trim()
+      : `https://${url.trim()}`;
+    const hostname = new URL(formattedUrl).hostname.toLowerCase();
     if (hostname.includes("gofile")) return "Gofile";
     if (hostname.includes("pixeldrain")) return "Pixeldrain";
     if (hostname.includes("mega")) return "Mega.nz";
-    if (hostname.includes("mediafire")) return "Mediafire";
     if (hostname.includes("bunkr")) return "Bunkr";
+    if (hostname.includes("walkfiles")) return "Walkfiles";
+    if (hostname.includes("fileditch")) return "Fileditch";
     if (hostname.includes("turbo")) return "Turbo";
     return hostname.replace(/^www\./, "");
   } catch {
@@ -47,6 +76,11 @@ export default function HomeClient() {
       const mirrors = links.map((s) => s.trim()).filter(Boolean);
       if (!title.trim()) throw new Error("Please enter a title for your mirror set.");
       if (mirrors.length === 0) throw new Error("Please add at least one download mirror link.");
+
+      const invalidMirrors = mirrors.filter((url) => !isAllowedMirror(url));
+      if (invalidMirrors.length > 0) {
+        throw new Error("Only mirrors with specified domains are allowed.");
+      }
 
       let res: Response | null = null;
       let lastErr: any = null;
