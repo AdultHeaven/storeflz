@@ -328,6 +328,45 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   async
   data-cfasync="false"
 /> */}
+
+      {/* Centered Ad Container */}
+      <div 
+        id="banner-ad-300x250" 
+        style={{ 
+          display: "flex", 
+          justifyContent: "center", 
+          alignItems: "center", 
+          width: "100%", 
+          minHeight: "250px", 
+          margin: "24px 0" 
+        }} 
+      />
+
+      <Script
+        id="banner-ad-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            atOptions = {
+              'key' : 'de969ad072620e41fdeb02d6cf68cc07',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+            (function() {
+              var container = document.getElementById('banner-ad-300x250');
+              if (container && !container.hasChildNodes()) {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.src = 'https://roomsmergeshipwreck.com/de969ad072620e41fdeb02d6cf68cc07/invoke.js';
+                container.appendChild(s);
+              }
+            })();
+          `,
+        }}
+      />
+
       <footer className="fx-footer">
         <div className="fx-wrap">
           <span>© {new Date().getFullYear()} Storeflz. All rights reserved.</span>
