@@ -18,7 +18,9 @@ const ALLOWED_DOMAINS = [
   "walkfiles",
   "fileditch",
   "turbo",
-  "filester"
+  "filester",
+  "yandex",
+  "yadi.sk"
 ];
 
 function isAllowedMirror(url: string): boolean {
@@ -49,6 +51,7 @@ function detectHostName(url: string): string | null {
     if (hostname.includes("fileditch")) return "Fileditch";
     if (hostname.includes("turbo")) return "Turbo";
     if (hostname.includes("filester")) return "Filester";
+    if (hostname.includes("yandex") || hostname.includes("yadi.sk")) return "Yandex Disk";
     return hostname.replace(/^www\./, "");
   } catch {
     return null;

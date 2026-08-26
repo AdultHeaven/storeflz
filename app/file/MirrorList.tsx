@@ -93,6 +93,8 @@ const mirrorMeta: Record<
   "walkfiles": { ads: "less", reliability: "high" },
   "fileditch": { ads: "less", reliability: "medium" },
   "filester": { ads: "high", reliability: "high" },
+  "yandex": { ads: "less", reliability: "high" },
+  "yadi.sk": { ads: "less", reliability: "high" },
 };
 
 function capitalize(s: string) {
