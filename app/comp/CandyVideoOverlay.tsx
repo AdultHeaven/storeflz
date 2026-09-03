@@ -236,7 +236,7 @@ export default function CandyVideoOverlay() {
   const handleVideoClick = () => {
     const target =
       offer === 'candi'
-        ? 'https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN'
+        ? 'https://t.frtayb.com/384478/153/35662?po=6533&aff_sub5=SF_006OG000004lmDN'
         : 'https://t.vlmai-1.com/384478/10139/0?aff_sub5=SF_006OG000004lmDN';
 
     openSmartLink(target, '_blank');
@@ -263,7 +263,7 @@ export default function CandyVideoOverlay() {
         </button>
 
         <SmartLink
-          href="https://t.vlmai-1.com/384478/9022/0?aff_sub5=SF_006OG000004lmDN"
+          href="https://t.frtayb.com/384478/153/35662?po=6533&aff_sub5=SF_006OG000004lmDN"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => {
