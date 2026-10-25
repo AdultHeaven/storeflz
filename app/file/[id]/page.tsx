@@ -1,5 +1,6 @@
 import "../file.css";
 import MirrorList from "../MirrorList";
+import { transformMirrorUrl } from "../mirrorUtils";
 import AdClickGate from "../../comp/AdClickGate"; // adjust path
 import Script from 'next/script';
 import AdBanner from "../../comp/AdBanner"; // adjust path
@@ -125,7 +126,9 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   const formattedDate = formatDate(data.created_at);
   const pageUrl = `https://storeflz.com/file/${data.id}`;
 
-  const hostnames = (data.mirrors || []).map((m) => {
+  const mirrors = (data.mirrors || []).map(transformMirrorUrl);
+
+  const hostnames = mirrors.map((m) => {
     try {
       return new URL(m).hostname.toLowerCase();
     } catch {
@@ -135,6 +138,7 @@ export default async function FileViewPage({ params }: { params: { id: string } 
   const hasGofile = hostnames.some((h) => h.includes("gofile"));
   const hasPixeldrain = hostnames.some((h) => h.includes("pixeldrain"));
   const hasMega = hostnames.some((h) => h.includes("mega"));
+  const hasWalkfiles = hostnames.some((h) => h.includes("walkfiles"));
 
   const schema = {
     "@context": "https://schema.org",
@@ -198,18 +202,24 @@ export default async function FileViewPage({ params }: { params: { id: string } 
             </div>
           </div>
 
-          <MirrorList mirrors={data.mirrors || []} pageUrl={pageUrl} />
+          <MirrorList mirrors={mirrors} pageUrl={pageUrl} />
 
           {/* Create AI Girlfriend Panel */}
           <CreateAiGirlfriendPanel />
 
           {/* Contextual Download Tips (moved below links) */}
-          {(hasGofile || hasPixeldrain || hasMega) && (
+          {(hasGofile || hasPixeldrain || hasMega || hasWalkfiles) && (
             <div className="fx-server-tips" style={{ margin: "18px 8px 10px", padding: "12px 14px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "10px" }}>
               <div style={{ fontWeight: "700", color: "var(--muted)", fontSize: "13.5px", marginBottom: "8px", display: "flex", alignItems: "center", gap: "6px" }}>
                 <span>💡</span> Helpful Server Instructions:
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "6px", fontSize: "12.5px", color: "var(--muted)", opacity: 0.9 }}>
+                {hasWalkfiles && (
+                  <div style={{ display: "flex", gap: "8px" }}>
+                    <span style={{ color: "var(--muted)" }}>•</span>
+                    <span><strong>Walkfiles mirror:</strong> Fast cloud streaming and direct downloads with zero limits. Recommended for video playback.</span>
+                  </div>
+                )}
                 {hasGofile && (
                   <div style={{ display: "flex", gap: "8px" }}>
                     <span style={{ color: "var(--muted)" }}>•</span>
