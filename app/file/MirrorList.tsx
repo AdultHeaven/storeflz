@@ -62,7 +62,6 @@
 "use client";
 import { useState } from "react";
 import { SmartLink, openSmartLink } from "../comp/SmartLink";
-import { transformMirrorUrl } from "./mirrorUtils";
 
 function host(u: string) {
   try {
@@ -93,7 +92,6 @@ const mirrorMeta: Record<
   "turbo": { ads: "high", reliability: "high" },
   "walkfiles": { ads: "less", reliability: "high" },
   "fileditch": { ads: "less", reliability: "medium" },
-  "embedditch": { ads: "less", reliability: "high" },
   "filester": { ads: "high", reliability: "high" },
   "yandex": { ads: "less", reliability: "high" },
   "yadi.sk": { ads: "less", reliability: "high" },
@@ -112,12 +110,11 @@ export default function MirrorList({
 }) {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [copiedPage, setCopiedPage] = useState(false);
-  const transformedMirrors = (mirrors || []).map(transformMirrorUrl);
 
   return (
     <>
       <ul className="fx-list">
-        {transformedMirrors.map((url, i) => {
+        {mirrors.map((url, i) => {
           const domain = host(url);
 
           const metaEntry = Object.entries(mirrorMeta).find(([key]) =>

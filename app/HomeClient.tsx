@@ -17,7 +17,6 @@ const ALLOWED_DOMAINS = [
   "mega",
   "walkfiles",
   "fileditch",
-  "embedditch",
   "turbo",
   "filester",
   "yandex",
@@ -49,7 +48,7 @@ function detectHostName(url: string): string | null {
     if (hostname.includes("mega")) return "Mega.nz";
     if (hostname.includes("bunkr")) return "Bunkr";
     if (hostname.includes("walkfiles")) return "Walkfiles";
-    if (hostname.includes("fileditch") || hostname.includes("embedditch")) return "Fileditch";
+    if (hostname.includes("fileditch")) return "Fileditch";
     if (hostname.includes("turbo")) return "Turbo";
     if (hostname.includes("filester")) return "Filester";
     if (hostname.includes("yandex") || hostname.includes("yadi.sk")) return "Yandex Disk";
